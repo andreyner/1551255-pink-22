@@ -6,4 +6,165 @@
   <title>HTML Academy: Пинк</title>
 </head>
 
+<body class="page__body">
+  <header class="page__header page-header">
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="img/pink-mobile.svg" width="74" height="23" alt="Pink">
+    </a>
+    <nav class="page-header__main-nav main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--current">
+            <a>
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Наши работы
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Записаться
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              Контакты
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              HTMAcademy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page__main page-main">
+    <h1 class="page-main__title">Конкурс на самое
+      безбашенное
+      путешествие с Пинк
+    </h1>
+    <section class="contest">
+      <h3 class="contest__title">
+        Поделитесь своей историей и получите
+        шанс выиграть ценный приз — 1000
+        миль на вашу бонусную карту!
+      </h3>
+      <form action="https://echo.htmlacademy.ru" method="POST" class="contest-form">
+        <div class="contest-form__passport passport">
+          <p class="passport__item">
+            <label class="passport__label" for="passport__last-name">Фамилия:</label>
+            <input class="passport__name" id="passport__last-name" name="last-name" type="text" required> </input>
+          </p>
+          <p class="passport__item">
+            <label class="passport__label" for="passport__first-name">Имя:</label>
+            <input class="passport__name" id="passport__first-name" name="first-name" type="text" required> </input>
+          </p>
+          <p class="passport__item">
+            <label class="passport__label" for="passport__patronymic">Отчество:</label>
+            <input class="passport__name" id="passport__patronymic" name="patronymic" type="text"> </input>
+          </p>
+        </div>
+        <div class="contest-form__travel-advanages travel-advanages">
+          <p class="travel-advanages__title">Ваши безбашенные
+            достижения в путешествии</p>
+          <ul class="travel-advanages__list">
+            <li class="travel-advanages__item">
+              <label class="advanages__label" for="advanages__checkbox">Сделал селфи с акулой</label>
+              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" checked name="shark"></input>
+            </li>
+            <li class="travel-advanages__item">
+              <label class="advanages__label" for="advanages__checkbox">Обгорел на пляже</label>
+              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" checked name="beach"> </input>
+            </li>
+            <li class="travel-advanages__item">
+              <label class="advanages__label" for="advanages__checkbox">Видел Чака Норриса</label>
+              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" name="сhuck_norris"> </input>
+            </li>
+            <li class="travel-advanages__item">
+              <label class="advanages__label" for="advanages__checkbox">Накупил сувениров</label>
+              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" name="souvenirs"> </input>
+            </li>
+            <li class="travel-advanages__item">
+              <label class="advanages__label" for="advanages__checkbox">Удержал башню</label>
+              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" checked name="tower"> </input>
+            </li>
+            <li class="travel-advanages__item">
+              <label class="advanages__label" for="advanages__checkbox">Разгромил отель</label>
+              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" name="hotel"> </input>
+            </li>
+          </ul>
+        </div>
+        <div class="contest-form__person-contact person-contact">
+          <p class="person-contact__item">
+            <label class="person-contact__label" for="person-contact__phone">Номер телефона</label>
+            <input class="person-contact__input" id="person-contact__phone" type="text" name="phone"> </input>
+          </p>
+          <p class="person-contact__item">
+            <label class="person-contact__label" for="person-contact__email">Адрес почты</label>
+            <input class="person-contact__input" id="person-contact__email" type="email" name="email" required></input>
+          </p>
+        </div>
+        <div class="contest-form__app app">
+          <p class="app__question">
+            С каким приложением
+            путешествовали?
+          </p>
+          <ul class="app__list">
+            <li class="app__item">
+              <label class="app__label" for="ios">Pink для iOS</label>
+              <input class="app__input" name="app" id="ios" type="radio" value="ios" checked> </input>
+            </li>
+            <li class="app__item">
+              <label class="app__label" for="android">Pink на Android</label>
+              <input class="app__input" name="app" id="android" type="radio" value="android"></input>
+            </li>
+            <li class="app__item">
+              <label class="app__label" for="windows">Windows Phone</label>
+              <input class="app__input" name="app" id="windows" type="radio" value="windows"></input>
+            </li>
+          </ul>
+        </div>
+        <div class="contest-form__emotion emotion">
+          <label class="emotion__label" for="emotion">Опишите свои эмоции</label>
+          <textarea class="emotion__input" name="emotion" id="emotion"
+            placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </div>
+        <input class="contest-form__submit" type="submit" value="Отправить форму">
+        <p class="contest-form__remark">* — обязательные поля</p>
+      </form>
+    </section>
+  </main>
+  <footer class="page__footer page-footer">
+    <h2 class="page-footer__title">
+      Мы в социальных сетях
+    </h2>
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
+            Инстаграме</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <p class="copyright__text">Разработано:</p>
+      <img class="copyright__logo" alt="HTML Academy"></img>
+    </div>
+  </footer>
+</body>
+
 </html>
