@@ -47,98 +47,99 @@
     </nav>
   </header>
   <main class="page__main page-main">
-    <h1 class="page-main__title">Конкурс на самое
+    <h1 class="h1">Конкурс на самое
       безбашенное
       путешествие с Пинк
     </h1>
     <section class="contest">
-      <h3 class="contest__title">
+      <h3 class="contest__title banner">
         Поделитесь своей историей и получите
         шанс выиграть ценный приз — 1000
         миль на вашу бонусную карту!
       </h3>
-      <form action="https://echo.htmlacademy.ru" method="POST" class="contest-form">
-        <div class="contest-form__passport passport">
-          <p class="passport__item">
-            <label class="passport__label" for="passport__last-name">Фамилия:</label>
-            <input class="passport__name" id="passport__last-name" name="last-name" type="text" required> </input>
+      <form action="https://echo.htmlacademy.ru" method="POST" class="form">
+        <fieldset class="form__field">
+          <p class="form__field-input">
+            <label class="form__label" for="last-name">Фамилия:</label>
+            <input class="form__input" id="last-name" name="last-name" type="text" required> </input>
           </p>
-          <p class="passport__item">
-            <label class="passport__label" for="passport__first-name">Имя:</label>
-            <input class="passport__name" id="passport__first-name" name="first-name" type="text" required> </input>
+          <p class="form__field-input">
+            <label class="form__label" for="first-name">Имя:</label>
+            <input class="form__input" id="first-name" name="first-name" type="text" required> </input>
           </p>
-          <p class="passport__item">
-            <label class="passport__label" for="passport__patronymic">Отчество:</label>
-            <input class="passport__name" id="passport__patronymic" name="patronymic" type="text"> </input>
+          <p class="form__field-input">
+            <label class="form__label" for="patronymic">Отчество:</label>
+            <input class="form__input" id="patronymic" name="patronymic" type="text"> </input>
           </p>
-        </div>
-        <div class="contest-form__travel-advanages travel-advanages">
-          <p class="travel-advanages__title">Ваши безбашенные
+        </fieldset>
+        <fieldset class="form__field">
+          <p class="form__field-title">Ваши безбашенные
             достижения в путешествии</p>
           <ul class="travel-advanages__list">
             <li class="travel-advanages__item">
-              <label class="advanages__label" for="advanages__checkbox">Сделал селфи с акулой</label>
-              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" checked name="shark"></input>
+              <label class="form__checkbox-label" for="shark">Сделал селфи с акулой</label>
+              <input class="form__checkbox" id="shark" type="checkbox" checked name="shark"></input>
             </li>
             <li class="travel-advanages__item">
-              <label class="advanages__label" for="advanages__checkbox">Обгорел на пляже</label>
-              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" checked name="beach"> </input>
+              <label class="form__checkbox-label" for="beach">Обгорел на пляже</label>
+              <input class="form__checkbox" id="beach" type="checkbox" checked name="beach"> </input>
             </li>
             <li class="travel-advanages__item">
-              <label class="advanages__label" for="advanages__checkbox">Видел Чака Норриса</label>
-              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" name="сhuck_norris"> </input>
+              <label class="form__checkbox-label" for="сhuck_norris">Видел Чака
+                Норриса</label>
+              <input class="form__checkbox" id="сhuck_norris" type="checkbox" name="сhuck_norris"> </input>
             </li>
             <li class="travel-advanages__item">
-              <label class="advanages__label" for="advanages__checkbox">Накупил сувениров</label>
-              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" name="souvenirs"> </input>
+              <label class="form__checkbox-label" for="souvenirs">Накупил сувениров</label>
+              <input class="form__checkbox" id="souvenirs" type="checkbox" name="souvenirs"> </input>
             </li>
             <li class="travel-advanages__item">
-              <label class="advanages__label" for="advanages__checkbox">Удержал башню</label>
-              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" checked name="tower"> </input>
+              <label class="form__checkbox-label" for="tower">Удержал башню</label>
+              <input class="form__checkbox" id="tower" type="checkbox" checked name="tower"> </input>
             </li>
             <li class="travel-advanages__item">
-              <label class="advanages__label" for="advanages__checkbox">Разгромил отель</label>
-              <input class="advanages__checkbox" id="advanages__checkbox" type="checkbox" name="hotel"> </input>
+              <label class="form__checkbox-label" for="hotel">Разгромил отель</label>
+              <input class="form__checkbox" id="hotel" type="checkbox" name="hotel"> </input>
             </li>
           </ul>
-        </div>
-        <div class="contest-form__person-contact person-contact">
-          <p class="person-contact__item">
-            <label class="person-contact__label" for="person-contact__phone">Номер телефона</label>
-            <input class="person-contact__input" id="person-contact__phone" type="text" name="phone"> </input>
+        </fieldset>
+        <fieldset class="form__field">
+          <p class="form__field-input">
+            <label class="form__label" for="phone">Номер телефона</label>
+            <input class="form__input" id="phone" type="text" name="phone"> </input>
           </p>
-          <p class="person-contact__item">
-            <label class="person-contact__label" for="person-contact__email">Адрес почты</label>
-            <input class="person-contact__input" id="person-contact__email" type="email" name="email" required></input>
+          <p class="form__field-input">
+            <label class="form__label" for="email">Адрес почты</label>
+            <input class="form__input" id="email" type="email" name="email" required></input>
           </p>
-        </div>
-        <div class="contest-form__app app">
-          <p class="app__question">
+        </fieldset>
+        <fieldset class="form__field">
+          <p class="form__field-title">
             С каким приложением
             путешествовали?
           </p>
           <ul class="app__list">
             <li class="app__item">
-              <label class="app__label" for="ios">Pink для iOS</label>
-              <input class="app__input" name="app" id="ios" type="radio" value="ios" checked> </input>
+              <label class="form__radio-label" for="ios">Pink для iOS</label>
+              <input class="form__radio" name="app" id="ios" type="radio" value="ios" checked> </input>
             </li>
             <li class="app__item">
-              <label class="app__label" for="android">Pink на Android</label>
-              <input class="app__input" name="app" id="android" type="radio" value="android"></input>
+              <label class="form__radio-label" for="android">Pink на Android</label>
+              <input class="form__radio" name="app" id="android" type="radio" value="android"></input>
             </li>
             <li class="app__item">
-              <label class="app__label" for="windows">Windows Phone</label>
-              <input class="app__input" name="app" id="windows" type="radio" value="windows"></input>
+              <label class="form__radio-label" for="windows">Windows Phone</label>
+              <input class="form__radio" name="app" id="windows" type="radio" value="windows"></input>
             </li>
           </ul>
-        </div>
-        <div class="contest-form__emotion emotion">
-          <label class="emotion__label" for="emotion">Опишите свои эмоции</label>
-          <textarea class="emotion__input" name="emotion" id="emotion"
+        </fieldset>
+        <fieldset class="form__field">
+          <label class="form__field-title" for="emotion">Опишите свои эмоции</label>
+          <textarea class="textarea__input" name="emotion" id="emotion"
             placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-        </div>
-        <input class="contest-form__submit" type="submit" value="Отправить форму">
-        <p class="contest-form__remark">* — обязательные поля</p>
+        </fieldset>
+        <button class="form__submit button" type="submit" value="Отправить форму"></button>
+        <p class="form__remark">* — обязательные поля</p>
       </form>
     </section>
   </main>
@@ -148,7 +149,7 @@
     </h2>
     <div class="page-footer__social social">
       <ul class="social__list">
-        <li class="social__item item">
+        <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
         </li>
         <li class="social__item">
