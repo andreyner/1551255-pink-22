@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -61,59 +62,59 @@
         <fieldset class="form__field">
           <p class="form__field-input">
             <label class="form__label" for="last-name">Фамилия:</label>
-            <input class="form__input" id="last-name" name="last-name" type="text" required> </input>
+            <input class="form__input" id="last-name" name="last-name" type="text" required />
           </p>
           <p class="form__field-input">
             <label class="form__label" for="first-name">Имя:</label>
-            <input class="form__input" id="first-name" name="first-name" type="text" required> </input>
+            <input class="form__input" id="first-name" name="first-name" type="text" required />
           </p>
           <p class="form__field-input">
             <label class="form__label" for="patronymic">Отчество:</label>
-            <input class="form__input" id="patronymic" name="patronymic" type="text"> </input>
+            <input class="form__input" id="patronymic" name="patronymic" type="text" />
           </p>
         </fieldset>
-        <fieldset class="form__field">
+        <fieldset class="form__field form__field--grey">
           <p class="form__field-title">Ваши безбашенные
             достижения в путешествии</p>
           <ul class="travel-advanages__list">
             <li class="travel-advanages__item">
               <label class="form__checkbox-label" for="shark">Сделал селфи с акулой</label>
-              <input class="form__checkbox" id="shark" type="checkbox" checked name="shark"></input>
+              <input class="form__checkbox" id="shark" type="checkbox" checked name="shark" />
             </li>
             <li class="travel-advanages__item">
               <label class="form__checkbox-label" for="beach">Обгорел на пляже</label>
-              <input class="form__checkbox" id="beach" type="checkbox" checked name="beach"> </input>
+              <input class="form__checkbox" id="beach" type="checkbox" checked name="beach" />
             </li>
             <li class="travel-advanages__item">
               <label class="form__checkbox-label" for="сhuck_norris">Видел Чака
                 Норриса</label>
-              <input class="form__checkbox" id="сhuck_norris" type="checkbox" name="сhuck_norris"> </input>
+              <input class="form__checkbox" id="сhuck_norris" type="checkbox" name="сhuck_norris" />
             </li>
             <li class="travel-advanages__item">
               <label class="form__checkbox-label" for="souvenirs">Накупил сувениров</label>
-              <input class="form__checkbox" id="souvenirs" type="checkbox" name="souvenirs"> </input>
+              <input class="form__checkbox" id="souvenirs" type="checkbox" name="souvenirs" />
             </li>
             <li class="travel-advanages__item">
               <label class="form__checkbox-label" for="tower">Удержал башню</label>
-              <input class="form__checkbox" id="tower" type="checkbox" checked name="tower"> </input>
+              <input class="form__checkbox" id="tower" type="checkbox" checked name="tower" />
             </li>
             <li class="travel-advanages__item">
               <label class="form__checkbox-label" for="hotel">Разгромил отель</label>
-              <input class="form__checkbox" id="hotel" type="checkbox" name="hotel"> </input>
+              <input class="form__checkbox" id="hotel" type="checkbox" name="hotel" />
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__field">
           <p class="form__field-input">
             <label class="form__label" for="phone">Номер телефона</label>
-            <input class="form__input" id="phone" type="text" name="phone"> </input>
+            <input class="form__input" id="phone" type="text" name="phone" />
           </p>
           <p class="form__field-input">
             <label class="form__label" for="email">Адрес почты</label>
-            <input class="form__input" id="email" type="email" name="email" required></input>
+            <input class="form__input" id="email" type="email" name="email" required />
           </p>
         </fieldset>
-        <fieldset class="form__field">
+        <fieldset class="form__field form__field--grey">
           <p class="form__field-title">
             С каким приложением
             путешествовали?
@@ -121,32 +122,35 @@
           <ul class="app__list">
             <li class="app__item">
               <label class="form__radio-label" for="ios">Pink для iOS</label>
-              <input class="form__radio" name="app" id="ios" type="radio" value="ios" checked> </input>
+              <input class="form__radio" name="app" id="ios" type="radio" value="ios" checked />
             </li>
             <li class="app__item">
               <label class="form__radio-label" for="android">Pink на Android</label>
-              <input class="form__radio" name="app" id="android" type="radio" value="android"></input>
+              <input class="form__radio" name="app" id="android" type="radio" value="android" />
             </li>
             <li class="app__item">
               <label class="form__radio-label" for="windows">Windows Phone</label>
-              <input class="form__radio" name="app" id="windows" type="radio" value="windows"></input>
+              <input class="form__radio" name="app" id="windows" type="radio" value="windows" />
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__field">
           <label class="form__field-title" for="emotion">Опишите свои эмоции</label>
-          <textarea class="textarea__input" name="emotion" id="emotion"
+          <textarea class="form__textarea-input" name="emotion" id="emotion"
             placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
         <button class="form__submit button" type="submit" value="Отправить форму"></button>
-        <p class="form__remark">* — обязательные поля</p>
+        <p class="form__remark"><span class="form__remark-start">*</span>— обязательные поля</p>
       </form>
     </section>
   </main>
   <footer class="page__footer page-footer">
-    <h2 class="page-footer__title">
+    <h2 class="page-footer__title visually-hidden">
       Мы в социальных сетях
     </h2>
+    <a class="page-footer__logo">
+      <img class="page-footer__logo-image" src="img/pink-mobile.svg" width="74" height="23" alt="Pink">
+    </a>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
