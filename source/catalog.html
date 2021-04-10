@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -60,14 +61,14 @@
           <p class="photo__author"> Анна
             <span class="photo__created">(5 минут назад)</span>
           </p>
-          <p class="photo__description photo-description">
+          <p class="photo__description">
             Прыгать или нет? Напишите в
             комментарии свой совет и
             смотрите прямую трансляцию в
             перископе, задавайте свои вопросы!
           </p>
           <p class="photo__likes photo-likes">
-            Нравится: <span class="photo-likes__number">215</span>
+            Нравится: <span class="photo__likes-number">215</span>
           </p>
         </li>
         <li class="photo-list__item photo">
@@ -75,11 +76,11 @@
           <p class="photo__author"> Левон
             <span class="photo__created">(5 часов назад)</span>
           </p>
-          <p class="photo__description photo-description">
+          <p class="photo__description">
             Вчера он на луну летал, сегодня в руки к нам попал.
           </p>
-          <p class="photo__likes photo-likes">
-            Нравится: <span class="photo-likes__number">356</span>
+          <p class="photo__likes">
+            Нравится: <span class="photo__likes-number">356</span>
           </p>
         </li>
         <li class="photo-list__item photo">
@@ -87,11 +88,11 @@
           <p class="photo__author"> Антон
             <span class="photo__created">(12 часов назад)</span>
           </p>
-          <p class="photo__description photo-description">
+          <p class="photo__description">
             Соседи будут рады!
           </p>
-          <p class="photo__likes photo-likes">
-            Нравится: <span class="photo-likes__number">666</span>
+          <p class="photo__likes">
+            Нравится: <span class="photo__likes-number">666</span>
           </p>
         </li>
         <li class="photo-list__item photo">
@@ -99,11 +100,11 @@
           <p class="photo__author"> Борис
             <span class="photo__created">(20 часов назад)</span>
           </p>
-          <p class="photo__description photo-description">
+          <p class="photo__description">
             Здесь могла быть ваша цитата о высоком и вечном
           </p>
-          <p class="photo__likes photo-likes">
-            Нравится: <span class="photo-likes__number">215</span>
+          <p class="photo__likes">
+            Нравится: <span class="photo__likes-number">215</span>
           </p>
         </li>
         <li class="photo-list__item photo">
@@ -111,11 +112,11 @@
           <p class="photo__author">Сергей
             <span class="photo__created">(25 часов назад)</span>
           </p>
-          <p class="photo__description photo-description">
+          <p class="photo__description">
             Самая кубанская в мире!
           </p>
-          <p class="photo__likes photo-likes">
-            Нравится: <span class="photo-likes__number">4</span>
+          <p class="photo__likes">
+            Нравится: <span class="photo__likes-number">4</span>
           </p>
         </li>
         <li class="photo-list__item photo">
@@ -123,11 +124,11 @@
           <p class="photo__author">Максим
             <span class="photo__created">(40 часов назад)</span>
           </p>
-          <p class="photo__description photo-description">
+          <p class="photo__description">
             Где снег-то?
           </p>
-          <p class="photo__likes photo-likes">
-            Нравится: <span class="photo-likes__number">150</span>
+          <p class="photo__likes">
+            Нравится: <span class="photo__likes-number">150</span>
           </p>
         </li>
         <li class="photo-list__item photo">
@@ -135,19 +136,19 @@
           <p class="photo__author">Надежда
             <span class="photo__created">(45 часов назад)</span>
           </p>
-          <p class="photo__description photo-description">
+          <p class="photo__description">
             Всем GM и взаимные лайки!
           </p>
-          <p class="photo__likes photo-likes">
-            Нравится: <span class="photo-likes__number">2560</span>
+          <p class="photo__likes">
+            Нравится: <span class="photo__likes-number">2560</span>
           </p>
         </li>
       </ul>
     </section>
     <section class="page-main__my-photo my-photo">
       <h2 class="my-photo__banner banner">
-        Взгляните на фотографии, которые выкладывают пользователи!
-        Видите, как не хватает ваших?
+        Затмите их всех!
+        Выкладывайте все, что накопилось в телефоне!
       </h2>
       <form action="https://echo.htmlacademy.ru" method="POST" class="form form-gallery">
         <img src="img/photo-7-tablet.jpg" alt="Редактируемое фото">
@@ -180,19 +181,22 @@
             </div>
           </li>
         </ul>
-        <button class="form-gallery__button gallery-button form-gallery__button--post" type="submit">
+        <button class="form-gallery__button form-gallery__button--post" type="submit">
           Запостить
         </button>
-        <button class="form-gallery__button gallery-button form-gallery__button--cancel" type="button">
+        <button class="form-gallery__button form-gallery__button--cancel" type="button">
           Отмена
         </button>
       </form>
     </section>
   </main>
   <footer class="page__footer page-footer">
-    <h2 class="page-footer__title">
+    <h2 class="page-footer__title visually-hidden">
       Мы в социальных сетях
     </h2>
+    <a class="page-footer__logo">
+      <img class="page-footer__logo-image" src="img/pink-mobile.svg" width="74" height="23" alt="Pink">
+    </a>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
