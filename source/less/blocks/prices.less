@@ -1,26 +1,27 @@
 .prices {
   .service-title {
-  .setfont(14px,30px,@grey-blue,400);
-  .setcellstyle();
- }
+    .setfont(14px,30px,@grey-blue,400);
+    .setcellstyle();
+  }
+
   .prices-title {
-  .setcellstyle();
-  .setfont(16px,30px,@basic-white,700);
-   &--hit {
-    position: relative;
-  }
-   &--hit::after {
-    position: absolute;
-  }
-   background-color: @grey-blue;
+    .setcellstyle();
+    .setfont(16px,30px,@basic-white,700);
 
-}
+    &--hit {
+      position: relative;
+    }
+
+    &--hit::after {
+      position: absolute;
+    }
+    background-color: @grey-blue;
+  }
+
   .prices-value {
-  .setfont(18px,30px,@basic-white,300);
+    .setfont(18px,30px,@basic-white,300);
+  }
+  .setcellstyle() {
+    border: 2px solid @grey-white;
+  }
 }
- .setcellstyle() {
-  border: 2px solid @grey-white;
-}
-
-}
-
