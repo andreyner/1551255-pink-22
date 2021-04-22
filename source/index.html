@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page__body">
@@ -13,11 +14,8 @@
       <img class="page-header__logo-image" src="img/pink-mobile.svg" width="74" height="23" alt="Pink">
     </a>
     <nav class="page-header__main-nav main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__site-list site-list">
           <li class="site-list__item site-list__item--current">
             <a>
               Главная
@@ -45,6 +43,9 @@
           </li>
         </ul>
       </div>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
     </nav>
   </header>
   <main class="page__main page-main">
@@ -54,7 +55,7 @@
       <p class="offer-download__slogan text-slogan text-slogan--white">
         Взгляните на жизнь иначе!
       </p>
-      <img class="offer-download__phone-image">
+      <img class="offer-download__phone-image" src="img/offerphonemobile.png">
       </img>
       <button class="offer-download__button">Скачать приложение</button>
       <ul class="offer-download__platform platform">
@@ -79,30 +80,29 @@
       <ul class="advantages__list">
         <li class="advantages__item">
           <h2 class="advantages__title">Поднимает настроение</h2>
-          <img class="advantages__image" src="img/iphone.jpg">
+          <img class="advantages__image" src="img/garbagephone.png" width="186" height="382">
           <p class="advantages__description">
             Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
           <p>
         </li>
         <li class="advantages__item">
           <h2 class="advantages__title">Меняет мир вокруг</h2>
-          <img class="advantages__image" src="img/iphone.jpg">
+          <img class="advantages__image" src="img/garbagephonered.png" width="186" height="382">
           <p class="advantages__description">
             Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
           <p>
         </li>
         <li class="advantages__item">
           <h2 class="advantages__title">Заводит новых друзей</h2>
-          <img class="advantages__image" src="img/iphone.jpg">
+          <img class="advantages__image advantages__image--permanently" src="img/hellophone.png">
           <p class="advantages__description">
             Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
           <p>
         </li>
       </ul>
     </section>
-    <section class="page-main__research research">
+    <section class="page-main__research research research--visibility">
       <h2 class="research__title">Эффект на 24 часа!</h2>
-      <img class="research__image">
       <p class="research__description">
         Британские ученые провели исследования
         и доказали, что положительный эффект
@@ -137,14 +137,14 @@
       <h2 class="visually-hidden">Цены на услуги</h2>
       <div class="prices__wrapper slider">
         <div class="prices__table slider__list">
-          <div class="prices__table-column slider__item">
-            <div class="service-title">
+          <div class="prices__table-column slider__item prices__table-column--header">
+            <div class="prices__table-column-title">
               Розовый фильтр
             </div>
-            <div class="service-title">
+            <div class="prices__table-column-title">
               Смайлики
             </div>
-            <div class="service-title">
+            <div class="prices__table-column-title">
               Комментарии
             </div>
           </div>
@@ -160,7 +160,7 @@
             <div class="service-avalibility service-avalibility--unavalible">
             </div>
           </div>
-          <div class="prices__table-column slider__item">
+          <div class="prices__table-column slider__item slider__item--current">
             <div class="prices-title prices-title--hit">
               Стандарт
               <span class="prices-value">3,99 USD</span>
@@ -214,7 +214,7 @@
         </span>
       </p>
       <div class="page-main__map map">
-        <img src="img/map.jpg">
+        <img class="map__image" src="img/map.jpg">
       </div>
     </section>
   </main>

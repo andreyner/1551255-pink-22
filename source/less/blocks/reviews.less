@@ -1,6 +1,8 @@
 
 .reviews__author {
   .setfont(18px,30px,@basic-black,700);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .reviews__author-info {
@@ -13,4 +15,18 @@
 
 .reviews__item {
   list-style-type: none;
+}
+
+.reviews {
+  @media (max-width: @tablet-width) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: @desktop-width) {
+    padding-top: 109px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 193px;
+  }
 }

@@ -1,6 +1,14 @@
 .offer-download {
-  background: @background url("../img/backdesktop.jpg") no-repeat center top;
+  background: @background url("../img/backmobile.jpg") no-repeat center top;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 74px;
+  }
 }
 
 .offer-download__remark {
@@ -17,8 +25,28 @@
   padding-bottom: 21px;
   padding-left: 38px;
   padding-right: 39px;
+  margin-top: 28px;
+  z-index: 2;
+}
+
+.offer-download__phone-image {
+  @media (max-width: @tablet-width) {
+    padding-top: 34px;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
+
+  @media (max-width: @desktop-width)and (min-width: @tablet-width) {
+    top: 34px;
+    right: 0;
+  }
 }
 
 .offer-download__slogan {
-  margin-top: 0;
+  padding-top: 29px;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
 }

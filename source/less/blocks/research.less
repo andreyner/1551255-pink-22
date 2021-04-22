@@ -7,7 +7,31 @@
   .setfont(14px,24px,@basic-black,400);
 }
 
+.research__title,
+.research__description,
+.research__link {
+  padding-left: 330px;
+}
+
 .research__link {
   .setfont(14px,24px,@red-pink,400);
   text-decoration-line: underline;
+}
+
+.research {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/24hour.png");
+    width: 238px;
+    height: 276px;
+  }
+
+  &--visibility {
+    @media (max-width: @tablet-width) {
+      display: none;
+    }
+  }
 }

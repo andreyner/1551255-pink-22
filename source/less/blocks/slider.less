@@ -1,4 +1,13 @@
 
 .slider__item {
   list-style-type: none;
+
+  @media (max-width: @tablet-width) {
+    &--current {
+      position: absolute;
+      display: block;
+      width: 100%;
+    }
+    display: none;
+  }
 }

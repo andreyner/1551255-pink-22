@@ -3,6 +3,21 @@
     .setfont(14px,30px,@grey-blue,400);
     .setcellstyle();
   }
+  position: relative;
+  background-color: @grey-dark;
+  padding-bottom: 100px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 60px;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+    bottom: 0;
+    left: 0;
+    background-color: @grey-dark;
+    top: -60px;
+  }
 
   .prices-title {
     .setcellstyle();
@@ -24,4 +39,37 @@
   .setcellstyle() {
     border: 2px solid @grey-white;
   }
+}
+
+.prices__table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    ". price_name price_name price_name"
+    "service avalibility avalibility avalibility"
+    "service avalibility avalibility avalibility"
+    "service avalibility avalibility avalibility";*/
+}
+
+.prices__table-column--header {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 45px;
+  grid-template-areas: "."
+    "service1"
+    "service2"
+    "service3";
+}
+
+.prices__table-column-title:nth-child(1) {
+  grid-area: service1;
+}
+
+.prices__table-column-title:nth-child(2) {
+  grid-area: service2;
+}
+
+.prices__table-column-title:nth-child(3) {
+  grid-area: service3;
 }
