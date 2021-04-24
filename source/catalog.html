@@ -5,142 +5,147 @@
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page__body">
   <header class="page__header page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/pink-mobile.svg" width="74" height="23" alt="Pink">
-    </a>
-    <nav class="page-header__main-nav main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current">
-            <a>
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">
-              Наши работы
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">
-              Записаться
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">
-              Контакты
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">
-              HTMAcademy
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="page-header__wrapper wrapper">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/pink-mobile.svg" width="74" height="23" alt="Pink">
+      </a>
+      <nav class="page-header__main-nav main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__site-list site-list">
+            <li class="site-list__item site-list__item--current">
+              <a>
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                Наши работы
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                Записаться
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                Контакты
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                HTMAcademy
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </nav>
+    </div>
   </header>
   <main class="page__main page-main">
-    <h1 class="h1">Фотографии пользователей
-    </h1>
+    <section class="page-main__main-title main-title">
+      <h1 class="h1">Фотографии пользователей
+      </h1>
+    </section>
     <section class="page-main__photo-gallery photo-gallery">
-      <h2 class="photo-gallery__banner banner">
+      <h2 class="photo-gallery__banner banner wrapper">
         Взгляните на фотографии, которые выкладывают пользователи!
         Видите, как не хватает ваших?
       </h2>
-      <ul class="photo-gallery__photo-list photo-list">
-        <li class="photo-list__item photo photo--panorama">
-          <img src="img/panorama-tablet.jpg" alt="Панорама дня">
-          <p class="photo__author"> Анна
-            <span class="photo__created">(5 минут назад)</span>
+      <ul class="photo-gallery__list">
+        <li class="photo-gallery__photo photo-gallery__photo--panorama">
+          <img class="photo-gallery__photo-image" src="img/panorama-tablet.jpg" alt="Панорама дня">
+          <p class="photo-gallery__author"> Анна
+            <span class="photo-gallery__created">(5 минут назад)</span>
           </p>
-          <p class="photo__description">
+          <p class="photo-gallery__description">
             Прыгать или нет? Напишите в
             комментарии свой совет и
             смотрите прямую трансляцию в
             перископе, задавайте свои вопросы!
           </p>
-          <p class="photo__likes photo-likes">
-            Нравится: <span class="photo__likes-number">215</span>
+          <p class="photo-gallery__likes photo-gallery-likes">
+            Нравится: <span class="photo-gallery__likes-number">215</span>
           </p>
         </li>
-        <li class="photo-list__item photo">
+        <li class="photo-gallery__photo">
           <img src="img/photo-1-mobile.jpg" alt="Машина">
-          <p class="photo__author"> Левон
-            <span class="photo__created">(5 часов назад)</span>
+          <p class="photo-gallery__author"> Левон
+            <span class="photo-gallery__created">(5 часов назад)</span>
           </p>
-          <p class="photo__description">
+          <p class="photo-gallery__description">
             Вчера он на луну летал, сегодня в руки к нам попал.
           </p>
-          <p class="photo__likes">
-            Нравится: <span class="photo__likes-number">356</span>
+          <p class="photo-gallery__likes">
+            Нравится: <span class="photo-gallery__likes-number">356</span>
           </p>
         </li>
-        <li class="photo-list__item photo">
+        <li class="photo-gallery__photo">
           <img src="img/photo-2-mobile.jpg" alt="Барабаны">
-          <p class="photo__author"> Антон
-            <span class="photo__created">(12 часов назад)</span>
+          <p class="photo-gallery__author"> Антон
+            <span class="photo-gallery__created">(12 часов назад)</span>
           </p>
-          <p class="photo__description">
+          <p class="photo-gallery__description">
             Соседи будут рады!
           </p>
-          <p class="photo__likes">
-            Нравится: <span class="photo__likes-number">666</span>
+          <p class="photo-gallery__likes">
+            Нравится: <span class="photo-gallery__likes-number">666</span>
           </p>
         </li>
-        <li class="photo-list__item photo">
+        <li class="photo-gallery__photo">
           <img src="img/photo-3-tablet.jpg" alt="Стеклянная крыша">
-          <p class="photo__author"> Борис
-            <span class="photo__created">(20 часов назад)</span>
+          <p class="photo-gallery__author"> Борис
+            <span class="photo-gallery__created">(20 часов назад)</span>
           </p>
-          <p class="photo__description">
+          <p class="photo-gallery__description">
             Здесь могла быть ваша цитата о высоком и вечном
           </p>
-          <p class="photo__likes">
-            Нравится: <span class="photo__likes-number">215</span>
+          <p class="photo-gallery__likes">
+            Нравится: <span class="photo-gallery__likes-number">215</span>
           </p>
         </li>
-        <li class="photo-list__item photo">
+        <li class="photo-gallery__photo">
           <img src="img/photo-4-tablet.jpg" alt="Кубанская бахча">
-          <p class="photo__author">Сергей
-            <span class="photo__created">(25 часов назад)</span>
+          <p class="photo-gallery__author">Сергей
+            <span class="photo-gallery__created">(25 часов назад)</span>
           </p>
-          <p class="photo__description">
+          <p class="photo-gallery__description">
             Самая кубанская в мире!
           </p>
-          <p class="photo__likes">
-            Нравится: <span class="photo__likes-number">4</span>
+          <p class="photo-gallery__likes">
+            Нравится: <span class="photo-gallery__likes-number">4</span>
           </p>
         </li>
-        <li class="photo-list__item photo">
+        <li class="photo-gallery__photo">
           <img src="img/photo-5-tablet.jpg" alt="Где-то на горе">
-          <p class="photo__author">Максим
-            <span class="photo__created">(40 часов назад)</span>
+          <p class="photo-gallery__author">Максим
+            <span class="photo-gallery__created">(40 часов назад)</span>
           </p>
-          <p class="photo__description">
+          <p class="photo-gallery__description">
             Где снег-то?
           </p>
-          <p class="photo__likes">
-            Нравится: <span class="photo__likes-number">150</span>
+          <p class="photo-gallery__likes">
+            Нравится: <span class="photo-gallery__likes-number">150</span>
           </p>
         </li>
-        <li class="photo-list__item photo">
+        <li class="photo-gallery__photo">
           <img src="img/photo-6-tablet.jpg" alt="В самолёте">
-          <p class="photo__author">Надежда
-            <span class="photo__created">(45 часов назад)</span>
+          <p class="photo-gallery__author">Надежда
+            <span class="photo-gallery__created">(45 часов назад)</span>
           </p>
-          <p class="photo__description">
+          <p class="photo-gallery__description">
             Всем GM и взаимные лайки!
           </p>
-          <p class="photo__likes">
-            Нравится: <span class="photo__likes-number">2560</span>
+          <p class="photo-gallery__likes">
+            Нравится: <span class="photo-gallery__likes-number">2560</span>
           </p>
         </li>
       </ul>
@@ -151,7 +156,7 @@
         Выкладывайте все, что накопилось в телефоне!
       </h2>
       <form action="https://echo.htmlacademy.ru" method="POST" class="form form-gallery">
-        <img src="img/photo-7-tablet.jpg" alt="Редактируемое фото">
+        <img class="form-gallery__photo" src="img/photo-7-tablet.jpg" alt="Редактируемое фото">
         <ul class="my-photo__tools-list tools-list">
           <li class="tools-list__item tools-list__item--cutting">
             <div class="tools-list__range-control range-control">
@@ -190,7 +195,7 @@
       </form>
     </section>
   </main>
-  <footer class="page__footer page-footer">
+  <footer class="page__footer page-footer wrapper">
     <h2 class="page-footer__title visually-hidden">
       Мы в социальных сетях
     </h2>

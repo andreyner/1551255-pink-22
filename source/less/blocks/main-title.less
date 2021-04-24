@@ -1,0 +1,20 @@
+.main-title {
+  background: @background url("../img/back-mobile-catalog.jpg") no-repeat center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 51px;
+
+  @media (max-width: @tablet-width) {
+    min-height: 237px;
+  }
+
+  @media (max-width: @desktop-width) and (min-width: @tablet-width) {
+    min-height: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 294px;
+  }
+}

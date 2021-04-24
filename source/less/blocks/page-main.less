@@ -1,5 +1,17 @@
-.page-main {
-  @media (min-width: @tablet-width) {
-    padding-top: 60px;
+.page__main {
+  position: relative;
+}
+
+.page-main__download {
+  @media (max-width: @desktop-width) {
+    top: 268px;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 339px;
+  }
+}
+
+.page-main__reviews {
+  z-index: 3;
 }

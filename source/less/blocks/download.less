@@ -1,0 +1,37 @@
+.download__remark {
+  .setfont(14px,24px,@basic-white,300);
+  text-align: center;
+}
+
+.download__button {
+  border: 3px solid @basic-white;
+  box-sizing: border-box;
+  border-radius: 29px;
+  .setfont(18px,18px,@basic-white,700);
+  background: transparent;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: 38px;
+  padding-right: 39px;
+  margin-top: 28px;
+  z-index: 2;
+  width: 100%;
+}
+
+.download {
+  @media (max-width: @tablet-width) {
+    background-color: @dark-blue;
+    width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 50%;
+  }
+
+  .download__wrapper {
+    @media (min-width: @tablet-width) {
+      width: 0.5*@tablet-width;
+    }
+  }
+}

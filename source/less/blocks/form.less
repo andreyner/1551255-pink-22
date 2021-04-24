@@ -3,6 +3,32 @@
   .app__item {
     list-style-type: none;
   }
+
+  @media (max-width: @desktop-width) {
+    display: grid;
+    grid-template: "FIO FIO"
+      "platform platform"
+      "contacts contacts"
+      "advanages advanages"
+      "emotion emotion"
+      "sendbtn remark";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template: "FIO platform"
+      "contacts contacts"
+      "advanages advanages"
+      "emotion emotion"
+      "sendbtn remark";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .form__label {
@@ -43,4 +69,47 @@
 
 .form__remark-start {
   color: @red-pink;
+}
+
+@media (min-width: @tablet-width) {
+  .form .form__field:nth-child(1) {
+    grid-area: FIO;
+  }
+
+  .form .form__field:nth-child(2) {
+    grid-area: advanages;
+    background-color: transparent;
+  }
+
+  .form .form__field:nth-child(3) {
+    grid-area: contacts;
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+    }
+  }
+
+  .form .form__field:nth-child(4) {
+    grid-area: platform;
+    background-color: transparent;
+  }
+
+  .form .form__field:nth-child(5) {
+    grid-area: emotion;
+  }
+
+  .form__submit {
+    grid-area: sendbtn;
+  }
+
+  .form__remark {
+    grid-area: remark;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

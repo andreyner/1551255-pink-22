@@ -1,52 +1,43 @@
 .offer-download {
-  background: @background url("../img/backmobile.jpg") no-repeat center top;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   position: relative;
   align-items: flex-start;
+  background: @background url("../img/backmobile.jpg") no-repeat center top;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     padding-top: 74px;
+    height: 729px;
   }
-}
-
-.offer-download__remark {
-  .setfont(14px,24px,@basic-white,300);
-}
-
-.offer-download__button {
-  border: 3px solid @basic-white;
-  box-sizing: border-box;
-  border-radius: 29px;
-  .setfont(18px,18px,@basic-white,700);
-  background: transparent;
-  padding-top: 21px;
-  padding-bottom: 21px;
-  padding-left: 38px;
-  padding-right: 39px;
-  margin-top: 28px;
-  z-index: 2;
 }
 
 .offer-download__phone-image {
-  @media (max-width: @tablet-width) {
+  /*@media (max-width: @tablet-width) {
     padding-top: 34px;
-  }
+  }*/
 
   @media (min-width: @tablet-width) {
     position: absolute;
-  }
-
-  @media (max-width: @desktop-width)and (min-width: @tablet-width) {
     top: 34px;
     right: 0;
   }
+
+  /*@media (max-width: @desktop-width)and (min-width: @tablet-width) {
+
+  }*/
 }
 
 .offer-download__slogan {
-  padding-top: 29px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-top: 95px;
   text-align: center;
+  margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 0.5*@tablet-width;
+  }
+}
+
+.offer-download__wrapper {
+  width: 100%;
 }

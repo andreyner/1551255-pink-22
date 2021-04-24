@@ -14,3 +14,38 @@
     color: @grey-blue;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .form-gallery {
+    display: grid;
+    grid-template: "photo photo tools tools"
+      "photo photo post cancel";
+  }
+}
+
+@media (max-width: @desktop-width) and (min-width: @tablet-width) {
+  .form-gallery {
+    display: grid;
+    grid-template: "photo tools"
+      "photo post"
+      "photo cancel";
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-gallery__photo {
+    grid-area: photo;
+  }
+
+  .my-photo__tools-list {
+    grid-area: tools;
+  }
+
+  .form-gallery__button--post {
+    grid-area: post;
+  }
+
+  .form-gallery__button--cancel {
+    grid-area: cancel;
+  }
+}

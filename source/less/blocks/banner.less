@@ -1,3 +1,16 @@
 .banner {
   .setfont(14px,30px,@grey-blue,400);
+  background-color: @basic-white;
+
+  @media (max-width: @tablet-width) {
+    min-height: 172px;
+  }
+
+  @media (max-width: @desktop-width) and (min-width: @tablet-width) {
+    min-height: 194px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 185px;
+  }
 }
