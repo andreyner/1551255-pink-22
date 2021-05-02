@@ -5,18 +5,19 @@
   font-weight: @weight;
 }
 .center() {
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (max-width: @tablet-width) {
-    max-width: @mobile-width;
-  }
-
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    max-width: @tablet-width;
-  }
-
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.pagepadding {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }

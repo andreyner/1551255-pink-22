@@ -1,5 +1,14 @@
 .page__main {
   position: relative;
+  margin-top: -89px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -110px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -150px;
+  }
 }
 
 .page-main__download {
@@ -14,4 +23,17 @@
 
 .page-main__reviews {
   z-index: 3;
+}
+
+.page-main__offer-download {
+  margin-top: -69px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -110px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 100px;
+  }
 }

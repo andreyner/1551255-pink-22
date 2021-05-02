@@ -1,9 +1,10 @@
-.download__remark {
+.promo__remark {
   .setfont(14px,24px,@basic-white,300);
   text-align: center;
+  margin-bottom: 0;
 }
 
-.download__button {
+.promo__button {
   border: 3px solid @basic-white;
   box-sizing: border-box;
   border-radius: 29px;
@@ -16,20 +17,28 @@
   margin-top: 28px;
   z-index: 2;
   width: 100%;
+  outline: none;
+
+  &:hover {
+    background-color: @basic-white;
+    color: @red-pink;
+  }
+
+  &:active {
+    background-color: @basic-white;
+    color: rgb(@red-pink, 0.3);
+  }
 }
 
-.download {
-  @media (max-width: @tablet-width) {
-    background-color: @dark-blue;
-    width: 100%;
-  }
+.promo {
+  background-color: @dark-blue;
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    width: 50%;
+    background-color: transparent;
+    max-width: 300px;
   }
 
-  .download__wrapper {
+  .promo__wrapper {
     @media (min-width: @tablet-width) {
       width: 0.5*@tablet-width;
     }

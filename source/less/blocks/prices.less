@@ -1,8 +1,5 @@
 .prices {
-  .service-title {
-    .setfont(14px,30px,@grey-blue,400);
-    .setcellstyle();
-  }
+
   position: relative;
   background-color: @grey-dark;
   padding-bottom: 100px;
@@ -19,9 +16,48 @@
     top: -29px;
   }
 
-  .prices-title {
-    .setcellstyle();
+  &-title--hit::before {
+    content: "";
+    background-image: url("../img/hit.png");
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 61px;
+      height: 61px;
+    }
+  }
+
+  .prices-feature--avalible {
+    content: "";
+    background-image: url("../img/yes.svg");
+    height: 21px;
+    width: 31px;
+    background-repeat: no-repeat;
+  }
+
+  .prices-feature--unavalible {
+    content: "";
+    background-image: url("../img/no.svg");
+    height: 27px;
+    width: 27px;
+    background-repeat: no-repeat;
+  }
+
+
+  .prices__table-column--current {
+    @media (max-width: @mobile-only) {
+      position: absolute;
+    }
+  }
+
+  .prices__table-column-title {
     .setfont(16px,30px,@basic-white,700);
+    text-align: center;
 
     &--hit {
       position: relative;
@@ -31,6 +67,20 @@
       position: absolute;
     }
     background-color: @grey-blue;
+    padding-top: 19px;
+    padding-bottom: 63px;
+    min-width: 152px;
+    position: relative;
+    min-height: 45px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 18px;
+      padding-bottom: 17px;
+    }
+  }
+
+  .prices-title {
+    background-color: @basic-white;
   }
 
   .prices-value {
@@ -41,46 +91,13 @@
   }
 }
 
-.prices__table {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /*grid-auto-rows: minmax(100px, auto);
-  grid-template-areas:
-    ". price_name price_name price_name"
-    "service avalibility avalibility avalibility"
-    "service avalibility avalibility avalibility"
-    "service avalibility avalibility avalibility";*/
-}
-
-.prices__table-column--header {
-  display: grid;
-  grid-template-columns: repeat(1, max-content);
-  grid-auto-rows: 45px;
-  grid-template-areas: "."
-    "service1"
-    "service2"
-    "service3";
-}
-
-.prices__table-column-title,
-.service-avalibility {
-  background-color: @basic-white;
-}
-
-.prices__table-column-title:nth-child(1) {
-  grid-area: service1;
-}
-
-.prices__table-column-title:nth-child(2) {
-  grid-area: service2;
-}
-
-.prices__table-column-title:nth-child(3) {
-  grid-area: service3;
-}
-
 .prices__wrapper {
   @media (min-width: @tablet-width) {
     .center();
+  }
+
+  @media (max-width: @mobile-only) {
+    position: relative;
+    overflow: hidden;
   }
 }
