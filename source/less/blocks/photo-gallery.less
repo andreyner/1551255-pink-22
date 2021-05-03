@@ -1,16 +1,77 @@
 .photo-gallery__photo {
   background-color: @grey-dark;
+  grid-column: 2;
+
+  @media (min-width: @tablet-width) {
+    &:nth-child(2n) {
+      grid-column: 2;
+    }
+
+    &:nth-child(2n+3) {
+      grid-column: 3;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:nth-child(3n+2) {
+      grid-column: 2;
+    }
+
+    &:nth-child(3n+3) {
+      grid-column: 3;
+    }
+
+    &:nth-child(3n+4) {
+      grid-column: 4;
+    }
+  }
 
   &--panorama {
     width: 100%;
+    grid-column: span 3;
+    position: relative;
 
     @media (min-width: @tablet-width) {
-      grid-column: span 2;
+      grid-column-start: 2;
+      grid-column-end: 4;
     }
 
     @media (min-width: @desktop-width) {
-      grid-column: span 3;
+      grid-column-start: 2;
+      grid-column-end: 5;
     }
+
+    &::before {
+      content: "";
+      background-image: url("../img/photo_hit.jpg");
+      background-size: cover;
+      width: 140px;
+      height: 36px;
+      position: absolute;
+      right: 0;
+
+      @media (min-width: @tablet-width) {
+        top: 57px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 54px;
+      }
+    }
+  }
+}
+
+.photo-gallery__author,
+.photo-gallery__description,
+.photo-gallery__likes {
+  padding-left: 17px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 27px;
   }
 }
 
@@ -38,19 +99,26 @@
 .photo-gallery__list {
   list-style-type: none;
   padding-left: 0;
+  display: grid;
+  grid-template-columns: auto 280px auto;
+  grid-gap: 20px;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto repeat(2, 300px) auto;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto repeat(3, 300px) auto;
+    grid-gap: 50px 20px;
   }
 }
 
 .photo-gallery__photo-image {
+  &--panorama {
+    width: 100%;
+    object-fit: cover;
+  }
+
   @media (max-width: @tablet-width) {
     height: 137px;
     width: 100%;

@@ -1,16 +1,19 @@
 .banner {
   .setfont(14px,30px,@grey-blue,400);
   background-color: @basic-white;
+  text-align: center;
+  padding-top: 54px;
+  padding-bottom: 60px;
+  margin-top: 0;
+  margin-bottom: 0;
 
-  @media (max-width: @tablet-width) {
-    min-height: 172px;
-  }
-
-  @media (max-width: @desktop-width) and (min-width: @tablet-width) {
-    min-height: 194px;
+  @media (min-width: @tablet-width) {
+    .setfont(18px,30px,@grey-blue,400);
+    padding-top: 100px;
+    padding-bottom: 85px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 185px;
+    padding-bottom: 97px;
   }
 }
