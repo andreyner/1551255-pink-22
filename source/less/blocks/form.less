@@ -11,8 +11,9 @@
       "contacts contacts"
       "advanages advanages"
       "emotion emotion"
-      "sendbtn remark";
+      "footer footer";
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -21,13 +22,20 @@
       "contacts contacts"
       "advanages advanages"
       "emotion emotion"
-      "sendbtn remark";
+      "footer footer";
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 74px 69px;
   }
 
   @media (max-width: @tablet-width) {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.form__field--innerpadding {
+  @media (min-width: @desktop-width) {
+    padding-right: 59px;
   }
 }
 
@@ -39,10 +47,13 @@
   .setfont(18px,30px,@grey-blue,400);
   border: 2px solid @grey-white;
   border-radius: 1px;
+  min-height: 59px;
+  box-sizing: border-box;
 }
 
 .form__field-title {
   .setfont(14px,18px,@red-pink,400);
+  text-align: center;
 }
 
 .form__checkbox-label {
@@ -61,6 +72,7 @@
   .setfont(18px,30px,@grey-dark,400);
   border: 2px solid @grey-white;
   border-radius: 1px;
+  width: 100%;
 }
 
 .form__remark {
@@ -71,9 +83,76 @@
   color: @red-pink;
 }
 
+.form__list-item {
+  list-style-type: none;
+}
+
+.form__list--app .form__list-item {
+  position: relative;
+  padding-left: 59px;
+
+  @media (max-width: @mobile-only) {
+    padding-left: 42px;
+  }
+}
+
+.form__list--advantages .form__list-item {
+  padding-left: 58px;
+  position: relative;
+}
+
+.form__checkbox:checked + .form__checkbox-label .form__checkbox-icon {
+  background-image: url("../img/checked.svg");
+}
+
+.form__radio:checked + .form__radio-label .form__radio-icon::before {
+  position: absolute;
+  content: "";
+  background-color: @red-pink;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: 9px;
+  top: 8px;
+}
+
+.form__checkbox-icon {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  left: 0;
+  background-color: @basic-white;
+  border: 2px solid @grey-white;
+  background-position: center;
+}
+
+.form__radio-icon {
+  position: absolute;
+  background-color: @basic-white;
+  width: 37px;
+  height: 37px;
+  box-sizing: border-box;
+  border: 2px solid @grey-white;
+  left: 0;
+  border-radius: 50%;
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: @tablet-width) {
   .form .form__field:nth-child(1) {
     grid-area: FIO;
+    border: none;
+  }
+
+  .form__footer {
+    grid-area: footer;
+    flex-direction: row;
   }
 
   .form .form__field:nth-child(2) {
@@ -86,6 +165,7 @@
 
     @media (min-width: @desktop-width) {
       display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -96,20 +176,57 @@
 
   .form .form__field:nth-child(5) {
     grid-area: emotion;
+    padding-left: 60px;
+
+    @media (min-width: @desktop-width) {
+      padding-left: 62px;
+    }
   }
 
   .form__submit {
     grid-area: sendbtn;
+    margin-right: auto;
+    min-width: 296px;
   }
 
   .form__remark {
     grid-area: remark;
+    margin-left: auto;
+  }
+
+  .form__field-input-icon--phone {
+    background: @grey-white url("../img/phone_icon.svg") no-repeat;
+  }
+
+  .form__field-input-icon--mail {
+    background: @grey-white url("../img/mail_icon.svg") no-repeat;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .form__list {
+.form__field-input-icon {
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  background-position: center;
+}
+
+.form__list {
+  &--advantages {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 69px 0;
+
+    @media (min-width: @desktop-width) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 69px 115px;
+    }
+  }
+
+  &--app {
+    display: grid;
+    grid-gap: 62px 0;
+
+    @media (min-width: @desktop-width) {
+      grid-gap: 63px 0;
+    }
   }
 }
