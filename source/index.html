@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -13,7 +17,11 @@
   <header class="page__header page-header page-header--opened">
     <div class="page-header__wrapper wrapper">
       <a class="page-header__logo pagepadding">
-        <img class="page-header__logo-image" src="img/pink-mobile.svg" width="74" height="23" alt="Pink">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+          <source media="(min-width: 660px)" srcset="img/logotype-tablet.svg">
+          <img class="page-header__logo-image" src="img/pink-mobile.svg" width="74" height="23" alt="Pink">
+        </picture>
       </a>
       <nav class="page-header__main-nav main-nav main-nav--nojs main-nav--opened">
         <button class="main-nav__toggle" type="button">
@@ -207,7 +215,7 @@
           </thead>
           <tbody>
             <tr class="prices__table-column">
-              <td class="prices__feature">
+              <td class="prices__feature-name">
                 Розовый фильтр
               </td>
               <td class="prices__feature prices-feature--avalible">
@@ -218,7 +226,7 @@
               </td>
             </tr>
             <tr class="prices__table-column prices__table-column--current">
-              <td class="prices__feature">
+              <td class="prices__feature-name">
                 Смайлики
               </td>
               <td class="prices__feature prices-feature--avalible">
@@ -229,7 +237,7 @@
               </td>
             </tr>
             <tr class="prices__table-column">
-              <td class="prices__feature">
+              <td class="prices__feature-name">
                 Комментарии
               </td>
               <td class="prices__feature prices-feature--avalible">

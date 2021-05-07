@@ -7,37 +7,54 @@
   background-size: cover;
 
   @media (min-width: @tablet-width) {
-    padding-top: 74px;
-    height: 729px;
+    padding-top: 212px;
+    height: 545px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 208px;
+    height: 645px;
   }
 }
 
 .offer-download__phone-image {
-  @media (min-width: @tablet-width) {
-    position: absolute;
+  @media (max-width: @mobile-only) {
+    margin-top: 34px;
   }
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 34px;
-    right: 0;
+    height: 545px;
+    bottom: 0;
+    left: 25%;
+    object-fit: contain;
   }
 
-  /*@media (max-width: @desktop-width)and (min-width: @tablet-width) {
-
-  }*/
+  @media (min-width: @desktop-width) {
+    height: 645px;
+    left: 40%;
+  }
 }
 
 .offer-download__slogan {
   padding-top: 95px;
   text-align: center;
   margin-top: 0;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     width: 0.5*@tablet-width;
+    padding-top: 0;
+    z-index: 2;
+    position: relative;
   }
 }
 
 .offer-download__wrapper {
   width: 100%;
+
+  @media (max-width: @mobile-only) {
+    display: flex;
+    flex-direction: column;
+  }
 }

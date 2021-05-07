@@ -48,11 +48,18 @@
     background-repeat: no-repeat;
   }
 
+  .prices__table-column--header {
+    @media (max-width: @mobile-only) {
+      display: flex;
+    }
+  }
 
-  .prices__table-column--current {
-    /*@media (max-width: @mobile-only) {
-      position: absolute;
-    }*/
+  .prices__table {
+    position: relative;
+  }
+
+  .prices__table-column {
+    position: relative;
   }
 
   .prices__table-column-title {
@@ -73,19 +80,31 @@
     position: relative;
     min-height: 45px;
 
+    @media (max-width: @mobile-only) {
+      width: 100vw;
+    }
+
     @media (min-width: @tablet-width) {
       padding-top: 18px;
       padding-bottom: 17px;
     }
   }
 
-  .prices__feature {
+  .prices__feature,
+  .prices__feature-name {
     background-color: @basic-white;
     padding-left: 19px;
     padding-bottom: 17px;
     padding-top: 18px;
     padding-right: 24px;
     background-position: center;
+  }
+
+  .prices__feature {
+    @media (max-width: @mobile-only) {
+      position: absolute;
+      left: 90vw;
+    }
   }
 
   .prices-value {
