@@ -67,8 +67,13 @@
         <p class="offer-download__slogan text-slogan text-slogan--white pagepadding">
           Взгляните на&nbsp;жизнь иначе!
         </p>
-        <img class="offer-download__phone-image" src="img/offerphonemobile.png">
-        </img>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/phone-desktop.png 1x, img/phone-desktop@2x.png 2x">
+          <source media="(min-width: 660px)" srcset="img/phone-tablet.png 1x, img/phone-tablet@2x.png 2x">
+          <img class="offer-download__phone-image" src="img/phone-mobile.png" srcset="img/phone-mobile@2x.png 2x"
+            alt="Изображние телефона">
+          </img>
+        </picture>
         <div class="offer-download__promo promo pagepadding">
           <button class="promo__button">Скачать приложение</button>
           <ul class="promo__platform platform">
@@ -115,7 +120,7 @@
         Устали от серости мегаполиса?
       </p>
       <p class="advantages__slogan text-slogan wrapper">
-        Нам есть, что вам предложить!
+        Нам есть, что вам <br>предложить!
       </p>
       <div class="advantages__list__back">
         <div class="wrapper  pagepadding">
@@ -137,7 +142,15 @@
             </li>
             <li class="advantages__item">
               <h2 class="advantages__title">Заводит новых друзей</h2>
-              <img class="advantages__image advantages__image--permanently" src="img/hellophone.png">
+              <picture class="advantages__item-wrapper">
+                <source media="(min-width: 1200px)"
+                  srcset="img/hellophone-desktop.png 1x, img/hellophone-desktop@2x.png 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/hellophone-tablet.png 1x, img/hellophone-tablet@2x.png 2x">
+                <img class="advantages__image advantages__image--permanently" src="img/hellophone-mobile.png"
+                  srcset="img//hellophone-mobile@2x.png 2x" width="157" height="320"
+                  alt="Изображение телефона со смайликом">
+              </picture>
               <p class="advantages__description">
                 Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
               <p>
@@ -280,7 +293,9 @@
         </p>
       </div>
       <div class="page-main__map map">
-        <img class="map__image" src="img/map.jpg">
+        <iframe class="map__image"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.32089461595365!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1620854555095!5m2!1sru!2sru"
+          width="320" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </section>
   </main>

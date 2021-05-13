@@ -1,20 +1,34 @@
 .main-title {
-  background: @background url("../img/back-mobile-catalog.jpg") no-repeat center top;
+  background-image: url("../img/backmobile.jpg");
   background-size: cover;
+  background-color: @background;
+  background-repeat: no-repeat;
+  background-position: center top;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 51px;
+  min-height: 237px;
 
-  @media (max-width: @tablet-width) {
-    min-height: 237px;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/backmobile@2x.jpg");
   }
 
-  @media (max-width: @desktop-width) and (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     min-height: 440px;
+    background-image: url("../img/back-tablet-catalog.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet-catalog@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 294px;
+    background-image: url("../img/backdesktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backdesktop@2x.jpg");
+    }
   }
 }

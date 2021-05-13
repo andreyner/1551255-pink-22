@@ -56,6 +56,7 @@
     background-color: @basic-white;
     min-height: 429px;
     box-sizing: border-box;
+    padding-top: 0;
   }
 }
 
@@ -63,8 +64,15 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../img/24hour.png");
+    background-image: url("../img/24hour.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     width: 238px;
     height: 276px;
+
+    @media (min-width: @desktop-width) {
+      width: 298px;
+      height: 345px;
+    }
   }
 }
