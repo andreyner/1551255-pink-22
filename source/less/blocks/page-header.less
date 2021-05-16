@@ -11,18 +11,86 @@
 
 .page-header__logo {
   z-index: 2;
+  display: block;
+  margin-right: auto;
+  text-decoration: none;
 
-  @media (max-width: @tablet-width) {
+  &-mobile,
+  &-tablet,
+  &-desktop {
+    fill: @basic-white;
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      fill: @red-pink;
+    }
+
+    &:active {
+      fill: @basic-white;
+      opacity: 0.3;
+    }
+  }
+
+  @media (max-width: @mobile-only) {
     padding-top: 22px;
+    padding-bottom: 22px;
+
+    &-mobile {
+      display: block;
+      width: 74px;
+      height: 23px;
+    }
+
+    &-tablet {
+      display: none;
+    }
+
+    &-desktop {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 40px;
+    padding-top: 27px;
+    padding-bottom: 42px;
+
+    &-mobile {
+      display: none;
+    }
+
+    &-tablet {
+      display: block;
+      width: 145px;
+      height: 40px;
+    }
+
+    &-desktop {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
     align-self: center;
-    padding-top: 0;
+    padding-top: 26px;
+    padding-left: 10px;
+
+    &-mobile {
+      display: none;
+    }
+
+    &-tablet {
+      display: none;
+    }
+
+    &-desktop {
+      display: block;
+      width: 147px;
+      height: 40px;
+    }
   }
 }
 
@@ -35,6 +103,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 110px;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,9 +111,3 @@
     justify-content: space-between;
   }
 }
-/*.page-header__main-nav {
-  @media (max-width: @desktop-width) {
-    position: absolute;
-    top: 0;
-  }
-}*/

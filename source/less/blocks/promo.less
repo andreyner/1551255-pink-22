@@ -4,6 +4,15 @@
   margin-bottom: 0;
   margin-top: 0;
   padding-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    .setfont(18px,24px,@basic-white,300);
+    padding-top: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 39px;
+  }
 }
 
 .promo__button {
@@ -20,6 +29,14 @@
   z-index: 2;
   width: 100%;
   outline: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 37px;
+  }
 
   &:hover {
     background-color: @basic-white;
@@ -47,5 +64,17 @@
     @media (min-width: @tablet-width) {
       width: 0.5*@tablet-width;
     }
+  }
+}
+
+.promo__platform {
+  padding-top: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 69px;
   }
 }

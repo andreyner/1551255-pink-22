@@ -9,7 +9,7 @@
   }
 }
 
-@media (max-width: @desktop-width) {
+@media (max-width: @tablet-only) {
   .main-nav--closed {
     .site-list__item {
       display: none;
@@ -83,24 +83,29 @@
 
 .main-nav--opened .main-nav__toggle {
   position: absolute;
-  top: -60px;
-  right: 0;
+  top: -52px;
+  right: 9px;
   border: none;
   width: 36px;
   height: 36px;
-  padding: 30px;
+  padding: 1px;
   background: transparent;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    top: -73px;
+  }
 
   &::before,
   &::after {
     content: "";
     position: absolute;
     width: 32px;
-    height: 2px;
+    height: 3px;
     background-color: @basic-white;
-    right: 15px;
-    bottom: 20px;
+    /*right: 15px;
+    bottom: 20px;*/
+    right: 0.5em;
   }
 
   &::before {

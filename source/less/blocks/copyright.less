@@ -1,13 +1,37 @@
 
 .copyright__link {
   .setfont(14px,18px,@grey-blue,400);
+  text-decoration: none;
 }
 
 .copyright__logo-image {
-  width: 27px;
-  height: 34px;
+  width: 34px;
+  height: 35px;
+  fill: @red-pink;
+}
+
+.copyright__link:hover .copyright__logo-image {
+  fill: @grey-blue;
+}
+
+.copyright__link:active .copyright__logo-image {
+  fill: @grey-blue;
+  opacity: 0.3;
 }
 
 .copyright {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 18px;
+  padding-right: 8px;
+
+  @media (min-width: @desktop-width) {
+    .setfont(18px,18px,@grey-blue,400);
+  }
 }

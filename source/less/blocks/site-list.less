@@ -34,17 +34,27 @@
 
 .site-list__item {
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
   border-top: 1px solid rgb(@basic-white, 0.15);
   border-bottom: 1px solid @basic-black;
+  text-transform: uppercase;
+  min-height: 65px;
+  box-sizing: border-box;
+  padding-top: 18px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 63px;
+    box-shadow: 0 1px 0 @basic-black, inset 0 1px 0 rgba(@basic-white, 0.15);
+    border: none;
+  }
 
   @media (min-width: @desktop-width) {
-    padding-left: 39px;
+    padding-left: 43px;
     padding-right: 39px;
-    padding-top: 48px;
-    padding-bottom: 49px;
+    padding-top: 45px;
     border-top: none;
     border-bottom: none;
+    text-transform: none;
+    .setfont(18px,18px,@basic-white,300);
+    box-shadow: none;
   }
 }

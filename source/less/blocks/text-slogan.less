@@ -1,14 +1,15 @@
 .text-slogan {
-  @media (max-width: @tablet-width) {
-    .setfont(24px,28.8px,@grey-blue,300);
-  }
+  .setfont(24px,28.8px,@grey-blue,300);
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    .setfont(40px,54px,@grey-blue,300);
+  @media (min-width: @tablet-width) {
+    .setfont(40px,48px,@grey-blue,300);
+    padding-top: 15px;
+    max-width: 300px;
   }
 
   @media (min-width: @desktop-width) {
     .setfont(50px,68px,@grey-blue,300);
+    padding-top: 0;
   }
 
   text-align: center;
