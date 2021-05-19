@@ -125,7 +125,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "source" //build
+      baseDir: "build"//source
     },
     cors: true,
     notify: false,
@@ -146,9 +146,9 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("build/less/**/*.less", gulp.series(styles));
+  gulp.watch("build/js/script.js", gulp.series(scripts));
+  gulp.watch("build/*.html", gulp.series(html, reload));
 }
 
 // Build
