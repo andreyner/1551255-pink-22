@@ -67,11 +67,22 @@
 }
 
 .slider__wrapper {
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
 
   @media (max-width: @mobile-only) {
     position: relative;
     left: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    .pagepadding();
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
