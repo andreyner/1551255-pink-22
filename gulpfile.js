@@ -125,7 +125,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "build"
+      baseDir: "source" //build
     },
     cors: true,
     notify: false,
