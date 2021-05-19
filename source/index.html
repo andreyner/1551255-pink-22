@@ -62,8 +62,8 @@
     <h1 class="h1 visually-hidden">Приложение "Пинк"</h1>
     <section class="page-main__offer-download offer-download">
       <h2 class="visually-hidden">Предложение о скачивании приложения</h2>
-      <div class="offer-download__wrapper">
-        <p class="offer-download__slogan text-slogan text-slogan--white pagepadding">
+      <div class="offer-download__wrapper wrapper">
+        <p class="offer-download__slogan text-slogan text-slogan--white">
           Взгляните на&nbsp;жизнь иначе!
         </p>
         <picture>
@@ -73,7 +73,7 @@
             alt="Изображние телефона">
           </img>
         </picture>
-        <div class="offer-download__promo promo pagepadding">
+        <div class="offer-download__promo promo">
           <button class="promo__button">Скачать приложение</button>
           <ul class="promo__platform platform">
             <li class="platform__item platform__item--apple">
@@ -144,11 +144,9 @@
     </section>
     <section class="page-main__research research pagepadding research--visibility">
       <div class="research__wrapper wrapper">
-        <picture class="research__item-wrapper">
-          <source media="(min-width: 1200px)" srcset="img/timer-desktop.png 1x, img/timer-desktop@2x.png 2x">
-          <img class="research__logo" src="img/timer-tablet.png" srcset="img/timer-tablet@2x.png 2x" width="238"
-            height="276" alt="Эффект 24 часа">
-        </picture>
+        <svg class="research__logo" width="43" height="47" aria-label="Эффект 24 часа">
+          <use xlink:href="img/sprite.svg#timer"></use>
+        </svg>
         <h2 class="research__title">Эффект на&nbsp;24&nbsp;часа!</h2>
         <p class="research__description">
           Британские ученые провели исследования
@@ -196,60 +194,62 @@
     <section class="page-main__prices prices">
       <h2 class="visually-hidden">Цены на услуги</h2>
       <div class="prices__wrapper slider slider--prices wrapper">
-        <table class="prices__table">
-          <thead>
-            <tr class="prices__table-column prices__table-column--header">
-              <th></th>
-              <th class="prices__table-column-title">
-                База<br>
-                <span class="prices-value">1,99 USD</span>
-              </th>
-              <th class="prices__table-column-title prices-title--hit">
-                Стандарт<br>
-                <span class="prices-value">3,99 USD</span>
-              </th>
-              <th class="prices__table-column-title">
-                АНЛИМ<br>
-                <span class="prices-value">9,99 USD</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="prices__table-column">
-              <td class="prices__feature-name">
-                Розовый&nbsp;фильтр
-              </td>
-              <td class="prices__feature prices-feature--avalible">
-              </td>
-              <td class="prices__feature prices-feature--unavalible">
-              </td>
-              <td class="prices__feature prices-feature--unavalible">
-              </td>
-            </tr>
-            <tr class="prices__table-column prices__table-column--current">
-              <td class="prices__feature-name">
-                Смайлики
-              </td>
-              <td class="prices__feature prices-feature--avalible">
-              </td>
-              <td class="prices__feature prices-feature--avalible">
-              </td>
-              <td class="prices__feature prices-feature--unavalible">
-              </td>
-            </tr>
-            <tr class="prices__table-column">
-              <td class="prices__feature-name">
-                Комментарии
-              </td>
-              <td class="prices__feature prices-feature--avalible">
-              </td>
-              <td class="prices__feature prices-feature--avalible">
-              </td>
-              <td class="prices__feature prices-feature--avalible">
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="slider__wrapper">
+          <table class="prices__table">
+            <thead>
+              <tr class="prices__table-column prices__table-column--header">
+                <th></th>
+                <th class="prices__table-column-title">
+                  База<br>
+                  <span class="prices-value">1,99 USD</span>
+                </th>
+                <th class="prices__table-column-title prices-title--hit">
+                  Стандарт<br>
+                  <span class="prices-value">3,99 USD</span>
+                </th>
+                <th class="prices__table-column-title">
+                  АНЛИМ<br>
+                  <span class="prices-value">9,99 USD</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="prices__table-column">
+                <td class="prices__feature-name">
+                  <span class="prices__feature-name-value">Розовый&nbsp;фильтр</span>
+                </td>
+                <td class="prices__feature prices-feature--avalible">
+                </td>
+                <td class="prices__feature prices-feature--unavalible">
+                </td>
+                <td class="prices__feature prices-feature--unavalible">
+                </td>
+              </tr>
+              <tr class="prices__table-column prices__table-column--current">
+                <td class="prices__feature-name">
+                  <span class="prices__feature-name-value">Смайлики</span>
+                </td>
+                <td class="prices__feature prices-feature--avalible">
+                </td>
+                <td class="prices__feature prices-feature--avalible">
+                </td>
+                <td class="prices__feature prices-feature--unavalible">
+                </td>
+              </tr>
+              <tr class="prices__table-column">
+                <td class="prices__feature-name">
+                  <span class="prices__feature-name-value">Комментарии</span>
+                </td>
+                <td class="prices__feature prices-feature--avalible">
+                </td>
+                <td class="prices__feature prices-feature--avalible">
+                </td>
+                <td class="prices__feature prices-feature--avalible">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p class="slider__toggles slider__toggles--price slider__toggles--visible">
           <button class="slider__toggle" type="button"></button>
           <button class="slider__toggle slider__toggle--current" type="button"></button>

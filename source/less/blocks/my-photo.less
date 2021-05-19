@@ -19,20 +19,32 @@
   &--cutting {
     width: 44px;
     height: 44px;
-    background-image: url("../img/crop.svg");
   }
 
   &--fill {
     width: 44px;
     height: 44px;
-    background-image: url("../img/fill.svg");
   }
 
   &--contrast {
     width: 32px;
     height: 32px;
-    background-image: url("../img/contrast.svg");
   }
+
+  .my-photo__tools-lable-svg {
+    fill: @grey-blue;
+    opacity: 0.3;
+  }
+
+  &:hover .my-photo__tools-lable-svg {
+    fill: @grey-blue;
+    opacity: 0.5;
+  }
+}
+
+.my-photo__tools-lable--active .my-photo__tools-lable-svg {
+  fill: @red-pink;
+  opacity: 1;
 }
 
 .my-photo__range-filter {
@@ -56,7 +68,6 @@
   &::after {
     content: "";
     position: absolute;
-    width: @mobile-width;
     height: 1px;
     background-color: @grey-blue;
     bottom: -34px;
@@ -78,8 +89,8 @@
 .my-photo__range-filter::-webkit-slider-thumb {
   /*-webkit-appearance: none;*/
   appearance: none;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: @basic-white;
   cursor: pointer;
@@ -91,16 +102,30 @@
   grid-gap: 20px;
 
   @media (max-width: @mobile-only) {
-    padding-top: 39px;
+    padding-top: 36px;
+    padding-left: 17px;
+    padding-right: 18px;
   }
 }
 
 .my-photo__tools-lables {
   display: flex;
-  justify-content: space-between;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+  padding-right: 13px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-gap: 20px;
   }
+}
+
+.my-photo__promo {
+  .setfont(14px,30px,@grey-blue,400);
+  background-color: @basic-white;
+  text-align: center;
+  padding-top: 29px;
+  margin-top: 0;
+  padding-bottom: 42px;
 }

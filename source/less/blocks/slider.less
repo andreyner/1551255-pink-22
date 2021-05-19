@@ -65,3 +65,13 @@
     justify-content: space-between;
   }
 }
+
+.slider__wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  @media (max-width: @mobile-only) {
+    position: relative;
+    left: 0;
+  }
+}

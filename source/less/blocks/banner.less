@@ -2,18 +2,25 @@
   .setfont(14px,30px,@grey-blue,400);
   background-color: @basic-white;
   text-align: center;
-  padding-top: 54px;
-  padding-bottom: 60px;
+  padding-top: 45px;
   margin-top: 0;
   margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     .setfont(18px,30px,@grey-blue,400);
-    padding-top: 100px;
-    padding-bottom: 85px;
+    padding-top: 92px;
+    padding-bottom: 18px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 97px;
+    padding-bottom: 25px;
+  }
+}
+
+.banner__request {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }

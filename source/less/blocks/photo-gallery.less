@@ -1,5 +1,4 @@
 .photo-gallery__photo {
-  background-color: @grey-dark;
   grid-column: 2;
 
   @media (min-width: @tablet-width) {
@@ -42,13 +41,19 @@
     }
 
     &::before {
-      content: "";
-      background-image: url("../img/photo_hit.svg");
+      content: "Панорама дня";
+      text-transform: uppercase;
+      background-color: @red-pink;
       background-size: cover;
+      text-align: center;
       width: 140px;
       height: 36px;
       position: absolute;
       right: 0;
+      padding-top: 11px;
+      box-sizing: border-box;
+      .pagemargin();
+      .setfont(12px,14px,@basic-white,700);
 
       @media (min-width: @tablet-width) {
         top: 57px;
@@ -65,6 +70,8 @@
 .photo-gallery__description,
 .photo-gallery__likes {
   padding-left: 17px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     padding-left: 30px;
@@ -90,6 +97,20 @@
 
 .photo-gallery__likes {
   .setfont(12px,24px,@red-pink,400);
+  text-transform: uppercase;
+  padding-left: 17%;
+  margin-top: 11px;
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 12px;
+    width: 13px;
+    position: absolute;
+    background-image: url("../img/heart.svg");
+    left: 17px;
+    top: 5px;
+  }
 }
 
 .photo-gallery {
@@ -100,8 +121,10 @@
   list-style-type: none;
   padding-left: 0;
   display: grid;
-  grid-template-columns: auto 280px auto;
-  grid-gap: 20px;
+  grid-template-columns: 20px 1fr 20px;
+  grid-gap: 20px 0;
+  margin-top: 0;
+  padding-top: 50px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: auto repeat(2, 300px) auto;
@@ -114,14 +137,14 @@
 }
 
 .photo-gallery__photo-image {
+  vertical-align: bottom;
+  height: 180px;
+  width: 100%;
+
   &--panorama {
     width: 100%;
     object-fit: cover;
-  }
-
-  @media (max-width: @tablet-width) {
     height: 137px;
-    width: 100%;
   }
 
   @media (min-width: @tablet-width) {
@@ -132,4 +155,17 @@
     height: 506px;
   }
   object-fit: cover;
+}
+
+.photo-gallery__wrapper {
+  background-color: @grey-dark;
+  .pagemargin();
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-gallery__photo--panorama .photo-gallery__wrapper {
+  .pagemargin();
 }
