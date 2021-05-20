@@ -18,8 +18,22 @@
     border: 3px solid @red-pink;
     margin-top: 72px;
 
+    &:hover {
+      color: @basic-white;
+      background-color: @red-pink;
+    }
+
+    &:active {
+      color: rgba(@basic-white, 0.3);
+      background-color: @red-pink;
+    }
+
     @media (min-width: @tablet-width) {
-      margin-top: 95px;
+      margin-top: 84px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 124px;
     }
   }
 
@@ -29,12 +43,21 @@
     color: @grey-blue;
     margin-top: 12px;
 
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: rgba(@basic-white, 0.3);
+      background-color: rgba(@grey-blue, 0.3);
+    }
+
     @media (min-width: @tablet-width) {
       margin-top: 24px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-top: 95px;
+      margin-top: 124px;
     }
   }
 }
@@ -48,6 +71,10 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
   }
 }
 
@@ -63,12 +90,14 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-left: 45px;
+    padding-left: 49px;
+    padding-top: 9px;
+    align-self: flex-start;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 90px;
-    padding-right: 60px;
+    padding-top: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -83,6 +112,12 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: center;
+    .pagepadding();
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+    padding-right: 60px;
+    align-items: stretch;
   }
 }

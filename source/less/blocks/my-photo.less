@@ -8,7 +8,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 57px;
-    padding-bottom: 54px;
+    padding-bottom: 44px;
   }
 }
 
@@ -16,19 +16,24 @@
   content: "";
   background-size: cover;
 
-  &--cutting {
-    width: 44px;
-    height: 44px;
-  }
-
-  &--fill {
-    width: 44px;
-    height: 44px;
-  }
-
-  &--contrast {
+  @media (max-width: @mobile-only) {
     width: 32px;
     height: 32px;
+
+    &--cutting {
+      width: 44px;
+      height: 44px;
+    }
+
+    &--fill {
+      width: 44px;
+      height: 44px;
+    }
+
+    &--contrast {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   .my-photo__tools-lable-svg {
@@ -39,6 +44,46 @@
   &:hover .my-photo__tools-lable-svg {
     fill: @grey-blue;
     opacity: 0.5;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
+}
+
+.my-photo__tools-lable--cutting .my-photo__tools-lable-svg {
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.my-photo__tools-lable--fill .my-photo__tools-lable-svg {
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 48px;
+    height: 43px;
+  }
+}
+
+.my-photo__tools-lable--contrast .my-photo__tools-lable-svg {
+  @media (min-width: @tablet-width) {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -71,17 +116,17 @@
     height: 1px;
     background-color: @grey-blue;
     bottom: -34px;
-
-    @media (max-width: @mobile-only) {
-      left: -60px;
-    }
+    left: -60px;
+    opacity: 0.1;
 
     @media (min-width: @tablet-width) {
       width: 275px;
+      left: -55px;
     }
 
     @media (min-width: @desktop-width) {
-      width: 410px;
+      width: 411px;
+      left: -92px;
     }
   }
 }
@@ -106,6 +151,19 @@
     padding-left: 17px;
     padding-right: 18px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 8px;
+    grid-gap: 49px;
+    min-width: 207px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 17px;
+    grid-gap: 5px;
+    min-width: 292px;
+    grid-template-rows: 70px;
+  }
 }
 
 .my-photo__tools-lables {
@@ -117,7 +175,15 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 40px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 42px;
+    grid-template-rows: repeat(3, 74px);
+    align-items: flex-start;
+    grid-gap: 0;
   }
 }
 
@@ -128,4 +194,15 @@
   padding-top: 29px;
   margin-top: 0;
   padding-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    .setfont(18px,30px,@grey-blue,400);
+    margin-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 64px;
+  }
 }

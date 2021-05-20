@@ -6,7 +6,7 @@
   background-position: center top;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
   min-height: 162px;
 
   @media (min-resolution: 2dppx) {
@@ -14,7 +14,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 348px;
+    min-height: 306px;
     background-image: url("../img/back-tablet-catalog.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -32,14 +32,8 @@
   }
 }
 
-.main-title__h1 {
-  padding-top: 20px;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 85px;
-  }
-
+.main-title--catalog {
   @media (min-width: @desktop-width) {
-    padding-top: 113px;
+    margin-top: 113px;
   }
 }
