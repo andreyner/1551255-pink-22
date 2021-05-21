@@ -5,6 +5,22 @@
 
   @media (max-width: @mobile-only) {
     flex-direction: column;
+    min-height: 284px;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 127px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 197px;
+    box-sizing: border-box;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

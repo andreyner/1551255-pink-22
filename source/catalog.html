@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link rel="icon" href="../favicon.ico">
+  <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -33,7 +33,7 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__site-list site-list">
             <li class="site-list__item site-list__item--current">
-              <a>
+              <a href="index.html">
                 Главная
               </a>
             </li>
@@ -240,10 +240,11 @@
               </div>
               <div class="my-photo__tools-range-controls">
                 <input class="my-photo__range-filter my-photo__range-filter--current" type="range"
-                  id="range-filter-cutting" name="range-filter-cutting">
-                <input class="my-photo__range-filter" type="range" id="range-filter-fill" name="range-filter-fill">
-                <input class="my-photo__range-filter" type="range" id="range-filter-contrast"
-                  name="range-filter-contrast">
+                  id="range-filter-cutting" name="range-filter-cutting" min="0" max="100" value="85">
+                <input class="my-photo__range-filter" type="range" id="range-filter-fill" name="range-filter-fill"
+                  min="0" max="100" value="15">
+                <input class="my-photo__range-filter" type="range" id="range-filter-contrast" min="0" max="100"
+                  value="50" name="range-filter-contrast">
               </div>
             </div>
             <button class="form-gallery__button form-gallery__button--post" type="submit">

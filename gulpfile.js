@@ -108,8 +108,7 @@ const copy = (done) => {
     "source/manifest.webmanifest"
   ], {
     base: "source"
-  })
-    .pipe(gulp.dest("build"))
+  }).pipe(gulp.dest("build"))
   done();
 }
 

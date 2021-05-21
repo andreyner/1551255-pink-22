@@ -1,11 +1,12 @@
 
 .slider__item {
   list-style-type: none;
+  display: none;
+}
 
-  &--current {
-    display: block;
-    width: 100%;
-  }
+.slider__item.slider__item--current {
+  display: block;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -56,6 +57,16 @@
 
   @media (min-width: @desktop-width) {
     display: none;
+  }
+}
+
+.slider__toggle:not(.slider__toggle--current) {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }
 
