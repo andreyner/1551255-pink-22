@@ -70,11 +70,10 @@
           <source media="(min-width: 1200px)" srcset="img/phone-desktop.png 1x, img/phone-desktop@2x.png 2x">
           <source media="(min-width: 660px)" srcset="img/phone-tablet.png 1x, img/phone-tablet@2x.png 2x">
           <img class="offer-download__phone-image" src="img/phone-mobile.png" srcset="img/phone-mobile@2x.png 2x"
-            alt="Изображние телефона">
-          </img>
+            alt="Изображние телефона" />
         </picture>
         <div class="offer-download__promo promo">
-          <button class="promo__button">Скачать приложение</button>
+          <a class="promo__button" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
           <ul class="promo__platform platform">
             <li class="platform__item platform__item--apple">
               <svg width="47" height="56" aria-label="Логотип apple">
@@ -110,14 +109,16 @@
           <ul class="advantages__list">
             <li class="advantages__item">
               <h2 class="advantages__title">Поднимает настроение</h2>
-              <img class="advantages__image" src="img/garbagephone.png" width="186" height="382">
+              <img class="advantages__image" src="img/garbagephone.png" width="186" height="382"
+                alt="Депрессивное изображение">
               <p class="advantages__description">
                 Приложение позволит вам победить осеннюю хандру и&#160;депрессию буквально в несколько кликов!
               </p>
             </li>
             <li class="advantages__item">
               <h2 class="advantages__title">Меняет мир вокруг</h2>
-              <img class="advantages__image" src="img/garbagephonered.png" width="186" height="382">
+              <img class="advantages__image" src="img/garbagephonered.png" width="186" height="382"
+                alt="Улучшенное депрессивное изображение">
               <p class="advantages__description">
                 Сделайте снимок и украсьте&#160;его смайликом или&#160;текстовой&#160;подписью, чтобы
                 усилить&nbsp;эффект
@@ -194,7 +195,7 @@
     <section class="page-main__prices prices">
       <h2 class="visually-hidden">Цены на услуги</h2>
       <div class="prices__wrapper slider slider--prices wrapper">
-        <div class="slider__wrapper">
+        <div class="slider__wrapper tarif">
           <table class="tarif__table">
             <thead class="tarif__thead">
               <tr>
@@ -283,7 +284,7 @@
       </div>
     </section>
     <section class="page-main__contacts contacts">
-      <div class="contacts_wrapper wrapper pagepadding">
+      <div class="contacts__wrapper wrapper pagepadding">
         <h2 class="contacts__title">
           Остались вопросы?<br>
           Свяжитесь с нами!
@@ -291,7 +292,7 @@
         <p class="contacts__text contacts__text--phone">
           Звоните:
           <a class="contacts__phone" href="tel:+78125556666">
-            <span class="contacts__phone-mobile">+7 (812) 555-66-66
+            <span class="contacts__phone-mobile">+7 (812) 555-66-66 </span>
           </a>
         </p>
         <p class="contacts__text contacts__text--email">
@@ -308,7 +309,7 @@
       <div class="page-main__map map">
         <iframe class="map__image"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.32089461595365!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1620854555095!5m2!1sru!2sru"
-          width="320" height="200" frameborder=no style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          width="320" height="200" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </section>
   </main>
@@ -353,7 +354,7 @@
     </div>
     <div class="page-footer__copyright copyright">
       <p class="copyright__text">Разработано:</p>
-      <a class="copyright__link" href="#">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <svg class="copyright__logo-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
           <use xlink:href="img/sprite.svg#icon_html-academy"></use>
         </svg>

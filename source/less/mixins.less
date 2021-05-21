@@ -5,6 +5,10 @@
   font-weight: @weight;
 }
 .center() {
+  @media (max-width: @mobile-width) {
+    min-width: 280px;
+  }
+
   @media (min-width: @desktop-width) {
     max-width: 940px;
     margin-left: auto;
