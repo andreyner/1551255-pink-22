@@ -9,6 +9,9 @@
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -17,13 +20,13 @@
   <header class="page__header page-header page-header--opened">
     <div class="page-header__wrapper wrapper">
       <a class="page-header__logo pagepadding" href="index.html">
-        <svg class="page-header__logo-mobile">
+        <svg class="page-header__logo-mobile" width="74" height="23">
           <use xlink:href="img/sprite.svg#logotype-mobile"></use>
         </svg>
-        <svg class="page-header__logo-tablet">
+        <svg class="page-header__logo-tablet" width="145" height="40">
           <use xlink:href="img/sprite.svg#logotype-tablet"></use>
         </svg>
-        <svg class="page-header__logo-desktop">
+        <svg class="page-header__logo-desktop" width="147" height="40">
           <use xlink:href="img/sprite.svg#logotype-desktop"></use>
         </svg>
       </a>
@@ -34,7 +37,7 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__site-list site-list">
             <li class="site-list__item site-list__item--current">
-              <a>
+              <a href="index.html">
                 Главная
               </a>
             </li>
@@ -67,28 +70,39 @@
           Взгляните на&nbsp;жизнь иначе!
         </p>
         <picture>
+          <source type="image/webp" media="(min-width: 1200px)"
+            srcset="img/phone-desktop.webp 1x, img/phone-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 660px)"
+            srcset="img/phone-tablet.webp 1x, img/phone-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/phone-mobile.webp 1x, img/phone-mobile@2x.webp 2x">
           <source media="(min-width: 1200px)" srcset="img/phone-desktop.png 1x, img/phone-desktop@2x.png 2x">
           <source media="(min-width: 660px)" srcset="img/phone-tablet.png 1x, img/phone-tablet@2x.png 2x">
           <img class="offer-download__phone-image" src="img/phone-mobile.png" srcset="img/phone-mobile@2x.png 2x"
-            alt="Изображние телефона" />
+            width="320" height="286" alt="Изображние телефона" />
         </picture>
         <div class="offer-download__promo promo">
           <a class="promo__button" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
           <ul class="promo__platform platform">
             <li class="platform__item platform__item--apple">
-              <svg width="47" height="56" aria-label="Логотип apple">
-                <use xlink:href="img/sprite.svg#icon-apple"></use>
-              </svg>
+              <a href="https://www.apple.com/ru/app-store/">
+                <svg width="47" height="56" aria-label="Логотип apple">
+                  <use xlink:href="img/sprite.svg#icon-apple"></use>
+                </svg>
+              </a>
             </li>
             <li class="platform__item platform__item--android">
-              <svg width="43" height="47" aria-label="Логотип android">
-                <use xlink:href="img/sprite.svg#icon-android"></use>
-              </svg>
+              <a href="https://play.google.com/store/apps/">
+                <svg width="43" height="47" aria-label="Логотип android">
+                  <use xlink:href="img/sprite.svg#icon-android"></use>
+                </svg>
+              </a>
             </li>
             <li class="platform__item platform__item--window">
-              <svg width="44" height="41" aria-label="Логотип microsoft">
-                <use xlink:href="img/sprite.svg#icon-microsoft"></use>
-              </svg>
+              <a href="https://www.microsoft.com/ru-RU/store/apps">
+                <svg width="44" height="41" aria-label="Логотип microsoft">
+                  <use xlink:href="img/sprite.svg#icon-microsoft"></use>
+                </svg>
+              </a>
             </li>
           </ul>
           <p class="promo__remark">
@@ -109,16 +123,22 @@
           <ul class="advantages__list">
             <li class="advantages__item">
               <h2 class="advantages__title">Поднимает настроение</h2>
-              <img class="advantages__image" src="img/garbagephone.png" width="186" height="382"
-                alt="Депрессивное изображение">
+              <picture>
+                <source type="image/webp" srcset="img/garbagephone.webp">
+                <img class="advantages__image" src="img/garbagephone.png" width="186" height="382"
+                  alt="Депрессивное изображение">
+              </picture>
               <p class="advantages__description">
                 Приложение позволит вам победить осеннюю хандру и&#160;депрессию буквально в несколько кликов!
               </p>
             </li>
             <li class="advantages__item">
               <h2 class="advantages__title">Меняет мир вокруг</h2>
-              <img class="advantages__image" src="img/garbagephonered.png" width="186" height="382"
-                alt="Улучшенное депрессивное изображение">
+              <picture>
+                <source type="image/webp" srcset="img/garbagephonered.webp">
+                <img class="advantages__image" src="img/garbagephonered.png" width="186" height="382"
+                  alt="Улучшенное депрессивное изображение">
+              </picture>
               <p class="advantages__description">
                 Сделайте снимок и украсьте&#160;его смайликом или&#160;текстовой&#160;подписью, чтобы
                 усилить&nbsp;эффект
@@ -127,6 +147,11 @@
             <li class="advantages__item">
               <h2 class="advantages__title">Заводит новых&#160;друзей</h2>
               <picture class="advantages__item-wrapper">
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/hellophone-desktop.webp 1x, img/hellophone-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                  srcset="img/hellophone-tablet.webp 1x, img/hellophone-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/hellophone-mobile.webp 1x, img/hellophone-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)"
                   srcset="img/hellophone-desktop.png 1x, img/hellophone-desktop@2x.png 2x">
                 <source media="(min-width: 660px)"
@@ -154,7 +179,7 @@
           и&nbsp;доказали, что&#160;положительный эффект
           от&nbsp;использования приложения длится целые сутки!
         </p>
-        <a class="research__link" href="#">Узнать больше об исследовании</a>
+        <a class="research__link link" href="#">Узнать больше об исследовании</a>
       </div>
     </section>
     <section class="page-main__reviews reviews wrapper pagepadding">
@@ -168,7 +193,8 @@
             </p>
             <p class="reviews__text">«Это приложение перевернуло мой мир
               и позволило по-новому взглянуть на привычные серые вещи!
-              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </p>
           </li>
           <li class="slider__item reviews__item">
             <p class="reviews__author">Николай Петров тест
@@ -178,15 +204,15 @@
             <p class="reviews__text">«Это приложение перевернуло мой мир»</p>
           </li>
         </ul>
-        <button class="reviews__prev" type="button">
+        <button class="reviews__prev" type="button" aria-label="Показать предыдущий слайд">
           <svg width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path opacity="0.3"
               d="M2.0413 20.5035L21.7483 1.4144C21.8281 1.3379 21.8914 1.24683 21.9346 1.14646C21.9778 1.04608 22 0.938398 22 0.829635C22 0.720871 21.9778 0.613187 21.9346 0.512814C21.8914 0.41244 21.8281 0.321369 21.7483 0.24487C21.6686 0.167255 21.5738 0.105671 21.4694 0.0636507C21.365 0.0216304 21.2532 0 21.1401 0C21.0271 0 20.9153 0.0216304 20.8109 0.0636507C20.7065 0.105671 20.6117 0.167255 20.532 0.24487L0.252535 19.9088C0.17249 19.9862 0.108978 20.0781 0.0656429 20.1793C0.0223074 20.2805 0 20.389 0 20.4985C0 20.6081 0.0223074 20.7166 0.0656429 20.8178C0.108978 20.919 0.17249 21.0109 0.252535 21.0883L20.532 40.7621C20.6967 40.9157 20.9167 41.001 21.1453 41C21.3139 40.9985 21.4783 40.9488 21.6181 40.8572C21.7578 40.7656 21.8666 40.6362 21.9309 40.485C21.9952 40.3339 22.0122 40.1677 21.9797 40.0072C21.9473 39.8467 21.8668 39.6991 21.7483 39.5827L2.0413 20.5035Z"
               fill="#283645" />
           </svg>
         </button>
-        <button class="reviews__next" type="button"><svg width="22" height="41" viewBox="0 0 22 41" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+        <button class="reviews__next" type="button" aria-label="Показать следующий слайд">
+          <svg width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path opacity="0.3"
               d="M19.9587 20.4965L0.251671 39.5856C0.171938 39.6621 0.108643 39.7532 0.065443 39.8535C0.0222435 39.9539 0 40.0616 0 40.1704C0 40.2791 0.0222435 40.3868 0.065443 40.4872C0.108643 40.5876 0.171938 40.6786 0.251671 40.7551C0.33144 40.8327 0.426224 40.8943 0.530588 40.9363C0.634953 40.9784 0.746847 41 0.859852 41C0.972857 41 1.08475 40.9784 1.18911 40.9363C1.29348 40.8943 1.38826 40.8327 1.46803 40.7551L21.7475 21.0912C21.8275 21.0138 21.891 20.9219 21.9344 20.8207C21.9777 20.7195 22 20.611 22 20.5015C22 20.3919 21.9777 20.2834 21.9344 20.1822C21.891 20.081 21.8275 19.9891 21.7475 19.9117L1.46803 0.237877C1.30326 0.0842934 1.08329 -0.00102615 0.85474 7.62939e-06C0.6861 0.00154114 0.52166 0.0511971 0.381939 0.14278C0.24222 0.234364 0.133411 0.363811 0.069088 0.51498C0.00476646 0.666149 -0.0122204 0.83234 0.0202503 0.992809C0.052721 1.15328 0.133209 1.30093 0.251671 1.41732L19.9587 20.4965Z"
               fill="#283645" />
@@ -298,13 +324,13 @@
         </h2>
         <p class="contacts__text contacts__text--phone">
           Звоните:
-          <a class="contacts__phone" href="tel:+78125556666">
+          <a class="contacts__phone link" href="tel:+78125556666">
             <span class="contacts__phone-mobile">+7 (812) 555-66-66 </span>
           </a>
         </p>
         <p class="contacts__text contacts__text--email">
           Пишите:
-          <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru
+          <a class="contacts__email link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru
           </a>
         </p>
         <p class="contacts__text contacts__text--guest">
@@ -324,11 +350,11 @@
     <h2 class="page-footer__title visually-hidden">
       Мы в социальных сетях
     </h2>
-    <a class="page-footer__logo">
-      <svg class="page-footer__logo-image page-footer__logo-image--tablet">
+    <a class="page-footer__logo" tabindex="0">
+      <svg class="page-footer__logo-image page-footer__logo-image--tablet" width="145" height="40">
         <use xlink:href="img/sprite.svg#foter-logotype"></use>
       </svg>
-      <svg class="page-footer__logo-image page-footer__logo-image--desktop">
+      <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="145" height="40">
         <use xlink:href="img/sprite.svg#foter-logotype-desktop"></use>
       </svg>
     </a>
@@ -362,7 +388,8 @@
     <div class="page-footer__copyright copyright">
       <p class="copyright__text">Разработано:</p>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="copyright__logo-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+        <svg class="copyright__logo-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27"
+          height="34">
           <use xlink:href="img/sprite.svg#icon_html-academy"></use>
         </svg>
       </a>

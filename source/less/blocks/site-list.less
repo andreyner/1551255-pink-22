@@ -15,6 +15,9 @@
     background-color: inherit;
     justify-content: space-between;
     border-top: none;
+    flex-wrap: wrap;
+    width: unset;
+    padding-left: 42px;
   }
 }
 
@@ -28,7 +31,7 @@
   }
 
   &:active {
-    color: rgba(@red-pink, 0.3);
+    color: rgba(@basic-white, 0.3);
   }
 }
 
@@ -48,8 +51,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 43px;
-    padding-right: 39px;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 45px;
     border-top: none;
     border-bottom: none;

@@ -2,6 +2,9 @@
   grid-column: 2;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+
     &:nth-child(2n) {
       grid-column: 2;
     }
@@ -63,6 +66,12 @@
         top: 54px;
       }
     }
+  }
+}
+
+.photo-gallery__photo-ref {
+  @media (min-width: @tablet-width) {
+    flex-grow: 0;
   }
 }
 
@@ -193,6 +202,7 @@
     min-height: 155px;
     margin-left: 0;
     margin-right: 0;
+    flex-grow: 1;
   }
 }
 

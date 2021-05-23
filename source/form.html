@@ -9,6 +9,9 @@
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -16,13 +19,13 @@
   <header class="page__header page-header page-header--opened">
     <div class="page-header__wrapper wrapper">
       <a class="page-header__logo pagepadding" href="index.html">
-        <svg class="page-header__logo-mobile">
+        <svg class="page-header__logo-mobile" width="74" height="23">
           <use xlink:href="img/sprite.svg#logotype-mobile"></use>
         </svg>
-        <svg class="page-header__logo-tablet">
+        <svg class="page-header__logo-tablet" width="145" height="40">
           <use xlink:href="img/sprite.svg#logotype-tablet"></use>
         </svg>
-        <svg class="page-header__logo-desktop">
+        <svg class="page-header__logo-desktop" width="147" height="40">
           <use xlink:href="img/sprite.svg#logotype-desktop"></use>
         </svg>
       </a>
@@ -95,32 +98,32 @@
             <li class="form__list-item">
               <input class="form__checkbox visually-hidden" id="shark" type="checkbox" checked name="shark" />
               <label class="form__checkbox-label" for="shark">Сделал&#160;селфи&#160;с&#160;акулой
-                <span class="form__checkbox-icon"></span></label>
+                <span class="form__checkbox-icon" tabindex="0"></span></label>
             </li>
             <li class="form__list-item">
               <input class="form__checkbox visually-hidden" id="beach" type="checkbox" checked name="beach" />
               <label class="form__checkbox-label" for="beach">Обгорел на пляже
-                <span class="form__checkbox-icon"></span></label>
+                <span class="form__checkbox-icon" tabindex="0"></span></label>
             </li>
             <li class="form__list-item">
               <input class="form__checkbox visually-hidden" id="сhuck_norris" type="checkbox" name="сhuck_norris" />
               <label class="form__checkbox-label" for="сhuck_norris">Видел&#160;Чака&#160;Норриса
-                <span class="form__checkbox-icon"></span></label>
+                <span class="form__checkbox-icon" tabindex="0"></span></label>
             </li>
             <li class="form__list-item">
               <input class="form__checkbox visually-hidden" id="souvenirs" type="checkbox" name="souvenirs" />
               <label class="form__checkbox-label" for="souvenirs">Накупил&#160;сувениров
-                <span class="form__checkbox-icon"></span></label>
+                <span class="form__checkbox-icon" tabindex="0"></span></label>
             </li>
             <li class="form__list-item">
               <input class="form__checkbox visually-hidden" id="tower" type="checkbox" checked name="tower" />
               <label class="form__checkbox-label" for="tower">Удержал&#160;башню
-                <span class="form__checkbox-icon"></span></label>
+                <span class="form__checkbox-icon" tabindex="0"></span></label>
             </li>
             <li class="form__list-item">
               <input class="form__checkbox visually-hidden" id="hotel" type="checkbox" name="hotel" />
               <label class="form__checkbox-label" for="hotel">Разгромил&#160;отель
-                <span class="form__checkbox-icon"></span></label>
+                <span class="form__checkbox-icon" tabindex="0"></span></label>
             </li>
           </ul>
         </fieldset>
@@ -147,26 +150,26 @@
             <li class="form__list-item">
               <input class="form__radio visually-hidden" name="app" id="ios" type="radio" value="ios" checked />
               <label class="form__radio-label" for="ios">Pink для iOS
-                <span class="form__radio-icon"></span>
+                <span class="form__radio-icon" tabindex="0"></span>
               </label>
             </li>
             <li class="form__list-item">
               <input class="form__radio visually-hidden" name="app" id="android" type="radio" value="android" />
               <label class="form__radio-label" for="android">Pink на Android
-                <span class="form__radio-icon"></span>
+                <span class="form__radio-icon" tabindex="0"></span>
               </label>
             </li>
             <li class="form__list-item">
               <input class="form__radio visually-hidden" name="app" id="windows" type="radio" value="windows" />
               <label class="form__radio-label" for="windows">Windows Phone
-                <span class="form__radio-icon"></span>
+                <span class="form__radio-icon" tabindex="0"></span>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__field form__field--writes-us">
           <label class="form__field-title" for="emotion">Опишите свои эмоции</label>
-          <textarea class="form__textarea-input" name="emotion" id="emotion"
+          <textarea class="form__textarea-input form__input" name="emotion" id="emotion"
             placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
         <div class="form__footer">
@@ -181,11 +184,11 @@
     <h2 class="page-footer__title visually-hidden">
       Мы в социальных сетях
     </h2>
-    <a class="page-footer__logo">
-      <svg class="page-footer__logo-image page-footer__logo-image--tablet">
+    <a class="page-footer__logo" tabindex="0">
+      <svg class="page-footer__logo-image page-footer__logo-image--tablet" width="145" height="40">
         <use xlink:href="img/sprite.svg#foter-logotype"></use>
       </svg>
-      <svg class="page-footer__logo-image page-footer__logo-image--desktop">
+      <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="145" height="40">
         <use xlink:href="img/sprite.svg#foter-logotype-desktop"></use>
       </svg>
     </a>
@@ -219,7 +222,8 @@
     <div class="page-footer__copyright copyright">
       <p class="copyright__text">Разработано:</p>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="copyright__logo-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+        <svg class="copyright__logo-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27"
+          height="34">
           <use xlink:href="img/sprite.svg#icon_html-academy"></use>
         </svg>
       </a>
